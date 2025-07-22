@@ -9,7 +9,7 @@ namespace LeetCodeSolutions.Problems
 
     public class TdaRational
     {
-        public string Inputs = "4; 1 / 2 + 3 / 4; 2 / 3 * 4 / 5; 6 / 8 - 1 / 4;  5 / 6 / 7 / 8";
+        public string Inputs = "4; 1 / 2 + 3 / 4; 2 / 3 * 4 / 5; 6 / 8 - 1 / 4; 5 / 6 / 7 / 8";
 
 
         public TdaRational() //depois tentar passar parametro pelo CTOR
@@ -37,7 +37,6 @@ namespace LeetCodeSolutions.Problems
                 //part[7] 7. elemento sempre eh a operacao
                 var result = Operation(part[7].ToString(), part[1].ToString(), part[9].ToString(), part[5].ToString(), part[13].ToString());
 
-
                     Console.WriteLine(result);
             
             }
@@ -57,6 +56,13 @@ namespace LeetCodeSolutions.Problems
 
                 result = numerator.ToString() + "/" + mmc.ToString();
 
+            }
+
+            if (@operator == "/") { 
+                int numerator = int.Parse(numerator1)*int.Parse(denominator2);
+                int denominator = int.Parse(denominator1)*int.Parse(numerator2);
+
+                result = numerator.ToString() + "/" + denominator.ToString();
             }
 
             return result;
