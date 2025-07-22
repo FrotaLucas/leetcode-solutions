@@ -18,7 +18,7 @@ namespace LeetCodeSolutions.Problems
         }
 
 
-        public void printTdaRational()
+        public void PrintResult()
         {
             string[] parts = Inputs.Split(";");
 
@@ -27,17 +27,28 @@ namespace LeetCodeSolutions.Problems
 
             foreach (string part in parts) {
 
+                double result;
 
                 //part[7] 7. elemento sempre eh a operacao
-                switch (part[7]) { 
-                 
+                switch (part[7])
+                {
+
+                    case '*':
+                        result = part[1] * part[9] / part[2]* part[3];
+                        break;
+
+
                 }
             
             
             }
 
+        }
 
-          
+        public void Operation(string operaton)
+        {
+
+
         }
 
     }
