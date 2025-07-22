@@ -23,13 +23,19 @@ namespace LeetCodeSolutions.Problems
             string[] parts = Inputs.Split(";");
 
             int n = int.Parse(parts[0]);
+            string[] equation = new string[n];
 
+            for (int i = 1; i <= n; i++)
+            {
+                equation[i - 1] = parts[i];
+                Console.WriteLine(equation[i-1]);
+            }
 
-            foreach (string part in parts) {
+            foreach (string part in equation) {
 
 
                 //part[7] 7. elemento sempre eh a operacao
-                var result = Operation(part[7].ToString(), part[1].ToString(), part[9].ToString(), part[5].ToString(), part[13].ToString())
+                var result = Operation(part[7].ToString(), part[1].ToString(), part[9].ToString(), part[5].ToString(), part[13].ToString());
 
 
                     Console.WriteLine(result);
