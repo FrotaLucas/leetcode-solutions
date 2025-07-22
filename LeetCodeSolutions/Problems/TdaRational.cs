@@ -30,15 +30,7 @@ namespace LeetCodeSolutions.Problems
                 double result;
 
                 //part[7] 7. elemento sempre eh a operacao
-                switch (part[7])
-                {
-
-                    case '*':
-                        result = part[1] * part[9] / part[2]* part[3];
-                        break;
-
-
-                }
+                Operation(part[7].ToString(), part[1].ToString(), part[9].ToString(), part[5].ToString(), part[13].ToString())
             
             
             }
@@ -48,7 +40,7 @@ namespace LeetCodeSolutions.Problems
         public string Operation(string @operator, string numerator1, string denominator1, string numerator2, string denominator2)
         {
 
-            string result;
+            string result = "default";
 
             if (@operator == "*"){
 
