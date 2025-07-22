@@ -45,9 +45,22 @@ namespace LeetCodeSolutions.Problems
 
         }
 
-        public void Operation(string operaton)
+        public string Operation(string @operator, string numerator1, string denominator1, string numerator2, string denominator2)
         {
 
+            string result;
+
+            if (@operator == "*"){
+
+                var mmc = int.Parse(denominator1)*int.Parse(denominator2);
+                
+                int numerator = int.Parse(numerator1) + int.Parse(numerator2);
+
+                result = numerator.ToString() + "/" + mmc.ToString();
+
+            }
+
+            return result;
 
         }
 
