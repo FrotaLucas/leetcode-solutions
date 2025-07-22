@@ -27,11 +27,12 @@ namespace LeetCodeSolutions.Problems
 
             foreach (string part in parts) {
 
-                double result;
 
                 //part[7] 7. elemento sempre eh a operacao
-                Operation(part[7].ToString(), part[1].ToString(), part[9].ToString(), part[5].ToString(), part[13].ToString())
-            
+                var result = Operation(part[7].ToString(), part[1].ToString(), part[9].ToString(), part[5].ToString(), part[13].ToString())
+
+
+                    Console.WriteLine(result);
             
             }
 
