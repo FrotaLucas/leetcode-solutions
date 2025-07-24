@@ -21,6 +21,16 @@ namespace LeetCodeSolutions.Problems
 
         public void PrintResult()
         {
+
+            //Liskov priciple 
+            //var calculation1 = new Calculation(string numerator1, string denominator1, string numerator2, string denominator2);
+            // calculation1.Operation = new Addition();
+
+            //var calculation2 = new Calculation(string numerator1, string denominator1, string numerator2, string denominator2);
+            // calculation2.Operation = new Subtraction();
+
+
+
             string[] parts = Inputs.Split(";");
 
             int n = int.Parse(parts[0]);
