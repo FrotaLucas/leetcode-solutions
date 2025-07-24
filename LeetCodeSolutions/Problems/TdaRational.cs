@@ -49,6 +49,31 @@ namespace LeetCodeSolutions.Problems
 
             string result = "default";
 
+            if(@operator == "+")
+            {
+                var n1 = int.Parse(numerator1);
+                var n2 = int.Parse(numerator2);
+
+                var d1 = int.Parse(denominator1);
+                var d2 = int.Parse(denominator2);
+
+                //encontrar MDC
+                while ( n2 != 0)
+                {
+                    var temp = n2;
+                    n2 = n1 % n2;
+                    n1 = temp;
+                }
+                var mdc = n1;
+
+                var mmc = n1*n2/mdc;
+
+                int numerator = n1 * (d1 / mmc) + n2 * (d2 / mmc);
+                result = numerator.ToString() + "/" + mmc.ToString();
+                
+
+            }
+
             if (@operator == "*"){
 
                 var mmc = int.Parse(denominator1)*int.Parse(denominator2);
