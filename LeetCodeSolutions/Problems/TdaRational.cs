@@ -70,7 +70,7 @@ namespace LeetCodeSolutions.Problems
                 int mmc = d1*d2/mdc;
 
                 int numerator = n1 * (mmc/ d1) + n2 * (mmc / d2);
-                result = numerator.ToString() + "/" + mmc.ToString();
+                result = $"{numerator}/{mmc}";
 
             }
 
@@ -101,7 +101,7 @@ namespace LeetCodeSolutions.Problems
                 int numerator = int.Parse(numerator1) * int.Parse(numerator2);
                 var denominator = int.Parse(denominator1)*int.Parse(denominator2);
 
-                result = numerator.ToString() + "/" + denominator.ToString();
+                result = $"{numerator}/{denominator}/";
 
             }
 
@@ -109,7 +109,7 @@ namespace LeetCodeSolutions.Problems
                 int numerator = int.Parse(numerator1)*int.Parse(denominator2);
                 int denominator = int.Parse(denominator1)*int.Parse(numerator2);
 
-                result = numerator.ToString() + "/" + denominator.ToString();
+                result = $"{numerator}/{denominator}";
             }
 
             return result;
