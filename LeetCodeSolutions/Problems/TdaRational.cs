@@ -36,7 +36,7 @@ namespace LeetCodeSolutions.Problems
 
 
                 //part[7] 7. elemento sempre eh a operacao
-                var result = Operation(part[7].ToString(), part[1].ToString(), part[9].ToString(), part[5].ToString(), part[13].ToString());
+                var result = Operation(part[7].ToString(), part[1].ToString(), part[5].ToString(), part[9].ToString(), part[13].ToString());
 
                     Console.WriteLine(result);
             
