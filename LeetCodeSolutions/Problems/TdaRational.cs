@@ -58,17 +58,16 @@ namespace LeetCodeSolutions.Problems
                 var d2 = int.Parse(denominator2);
 
                 //encontrar MDC
-                var dd1 = d1;
-                var dd2 = d2;
-                while ( dd2 != 0)
+                int b = d2; int a = d1;
+                while ( b != 0)
                 {
-                    var temp = dd2;
-                    dd2 = dd1 % dd2;
-                    dd1 = temp;
+                    int temp = b;
+                    b = a % b;
+                    a = temp;
                 }
-                var mdc = dd1;
+                int mdc = a;
 
-                var mmc = d1*d2/mdc;
+                int mmc = d1*d2/mdc;
 
                 int numerator = n1 * (mmc/ d1) + n2 * (mmc / d2);
                 result = numerator.ToString() + "/" + mmc.ToString();
@@ -77,6 +76,7 @@ namespace LeetCodeSolutions.Problems
 
             if (@operator == "-") { 
             
+
             
             
             }
