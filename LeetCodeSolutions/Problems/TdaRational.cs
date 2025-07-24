@@ -81,7 +81,7 @@ namespace LeetCodeSolutions.Problems
                 var d1 = int.Parse(denominator1);
                 var d2 = int.Parse(denominator2);
 
-                int a = d1; int b = d1;
+                int a = d1; int b = d2;
                 while (b != 0) {
                     int temp = b;
                     b = a % b;
@@ -92,7 +92,7 @@ namespace LeetCodeSolutions.Problems
                 int mmc = d1*d2/mdc;
 
                 int numerator = n1*(mmc/d1) - n2*(mmc/d2);
-                result = numerator.ToString() + '/' + mmc.ToString();
+                result = $"{numerator}/{mmc}";
             }
 
 
