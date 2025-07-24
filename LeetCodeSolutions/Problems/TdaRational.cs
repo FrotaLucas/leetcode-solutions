@@ -76,11 +76,11 @@ namespace LeetCodeSolutions.Problems
 
             if (@operator == "*"){
 
-                var mmc = int.Parse(denominator1)*int.Parse(denominator2);
+                var denominator = int.Parse(denominator1)*int.Parse(denominator2);
                 
-                int numerator = int.Parse(numerator1) + int.Parse(numerator2);
+                int numerator = int.Parse(numerator1) * int.Parse(numerator2);
 
-                result = numerator.ToString() + "/" + mmc.ToString();
+                result = numerator.ToString() + "/" + denominator.ToString();
 
             }
 
