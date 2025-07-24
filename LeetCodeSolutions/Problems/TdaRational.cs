@@ -76,9 +76,8 @@ namespace LeetCodeSolutions.Problems
 
             if (@operator == "*"){
 
-                var denominator = int.Parse(denominator1)*int.Parse(denominator2);
-                
                 int numerator = int.Parse(numerator1) * int.Parse(numerator2);
+                var denominator = int.Parse(denominator1)*int.Parse(denominator2);
 
                 result = numerator.ToString() + "/" + denominator.ToString();
 
