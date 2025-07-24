@@ -101,7 +101,7 @@ namespace LeetCodeSolutions.Problems
                 int numerator = int.Parse(numerator1) * int.Parse(numerator2);
                 var denominator = int.Parse(denominator1)*int.Parse(denominator2);
 
-                result = $"{numerator}/{denominator}/";
+                result = $"{numerator}/{denominator}";
 
             }
 
