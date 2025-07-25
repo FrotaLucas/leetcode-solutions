@@ -1,6 +1,4 @@
-﻿using LeetCodeSolutions.Problems.TdaRational.Operations;
-
-namespace LeetCodeSolutions.Problems.TdaRational.Operations
+﻿namespace LeetCodeSolutions.Problems.TdaRational.Operations
 {
     public class OperationFactory
     {

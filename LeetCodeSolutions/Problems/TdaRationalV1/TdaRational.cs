@@ -1,6 +1,6 @@
 ﻿using LeetCodeSolutions.Problems.TdaRational.Operations;
 
-namespace LeetCodeSolutions.Problems.TdaRational
+namespace LeetCodeSolutions.Problems.TdaRationalV1
 {
 
     //BEE 1022
@@ -23,6 +23,7 @@ namespace LeetCodeSolutions.Problems.TdaRational
 
             //var calculation2 = new Calculation(string numerator1, string denominator1, string numerator2, string denominator2);
             // calculation2.Operation = new Subtraction();
+
 
 
 

@@ -1,5 +1,6 @@
 ﻿using System;
-using LeetCodeSolutions.Problems.TdaRational;
+using LeetCodeSolutions.Problems.TdaRationalV1;
+//using LeetCodeSolutions.Problems.TdaRational;
 
 
 class Program
@@ -8,9 +9,12 @@ class Program
     static void Main(string[] args)
     {
 
-        var TdaRational = new TdaRational();
+        //var TdaRational = new TdaRational();
+        var tdaRational = new TdaRational();
+        tdaRational.PrintResult();
 
-        TdaRational.PrintResult();
+
+        //TdaRational.PrintResult();
 
     }
 
