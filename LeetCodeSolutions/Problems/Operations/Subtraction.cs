@@ -9,7 +9,7 @@ namespace LeetCodeSolutions.Problems.Operations
     public class Subtraction : Operation
     {
 
-        Subtraction() {
+        public Subtraction() {
             TypeOperation = "-";
         }
 
