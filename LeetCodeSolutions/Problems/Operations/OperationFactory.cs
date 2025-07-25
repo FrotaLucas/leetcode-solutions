@@ -7,7 +7,11 @@
             return new List<Operation>()
             {
 
-                new Addition()
+                new Addition(),
+                new Subtraction(),
+                new Multiplication(),
+                new Division(),
+
             };
         }
     }
