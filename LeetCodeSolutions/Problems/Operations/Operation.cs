@@ -6,15 +6,21 @@
         public string Numerator1 { get; set; }
         public string Numerator2 { get; set; }
 
+        public string Denominator1 { get; set; }
+
+        public string Denominator2 { get; set; }
+
         public Operation()
         {
 
         }
-        public Operation(string typeOperation, string numerator1, string numerator2)
+        public Operation(string typeOperation, string numerator1, string numerator2, string denominator1, string denominator2)
         {
             TypeOperation = typeOperation;
             Numerator1 = numerator1;
             Numerator2 = numerator2;
+            Denominator1 = denominator1;
+            Denominator2 = denominator2;
         }
         public virtual void DoOperation() { }
     }
