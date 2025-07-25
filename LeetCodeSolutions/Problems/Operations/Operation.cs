@@ -12,6 +12,8 @@
 
         public string Denominator2 { get; set; }
 
+        //construtor desse classe Operation que sera chamado ao criar classes filhas
+        //sem ele, o construtor logo depois vai ser chamado levando a um erro pq nao tem parametro.
         public Operation()
         {
 
