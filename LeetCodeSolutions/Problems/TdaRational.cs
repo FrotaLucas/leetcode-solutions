@@ -57,14 +57,14 @@ namespace LeetCodeSolutions.Problems
 
             foreach (string part in equation)
             {
-                var operation = Run(part[7].ToString(), part[1].ToString(), part[5].ToString());
+                var operation = Run(part[7].ToString(), part[1].ToString(), part[5].ToString(), part[9].ToString(), part[13].ToString());
                 operation.DoOperation();
 
             }
            
         }
 
-        private Operation Run(string typeOperation, string numerator1, string numerator2)
+        private Operation Run(string typeOperation, string numerator1, string denominator1, string numerator2, string denominator2)
         {
             if (operations.Any(op => op.TypeOperation == typeOperation) == false)
             {
