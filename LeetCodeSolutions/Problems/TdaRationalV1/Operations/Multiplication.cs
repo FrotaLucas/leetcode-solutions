@@ -1,4 +1,4 @@
-﻿namespace LeetCodeSolutions.Problems.TdaRational.Operations
+﻿namespace LeetCodeSolutions.Problems.TdaRationalV1.Operations
 {
     public class Multiplication : Operation
     {

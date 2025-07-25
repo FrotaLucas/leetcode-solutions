@@ -1,4 +1,4 @@
-﻿using LeetCodeSolutions.Problems.TdaRational.Operations;
+﻿using LeetCodeSolutions.Problems.TdaRationalV1.Operations;
 
 namespace LeetCodeSolutions.Problems.TdaRationalV1
 {
