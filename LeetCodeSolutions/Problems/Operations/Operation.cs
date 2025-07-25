@@ -18,6 +18,7 @@
         {
 
         }
+
         public Operation(string typeOperation, string numerator1, string denominator1, string numerator2, string denominator2)
         {
             TypeOperation = typeOperation;

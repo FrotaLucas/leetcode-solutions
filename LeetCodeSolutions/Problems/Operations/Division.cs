@@ -8,9 +8,9 @@ namespace LeetCodeSolutions.Problems.Operations
 {
     public class Division : Operation
     {
-        public Division() { 
-        
-            TypeOperation = "/"
+        public Division() {
+
+            TypeOperation = "/";
         }
 
 
