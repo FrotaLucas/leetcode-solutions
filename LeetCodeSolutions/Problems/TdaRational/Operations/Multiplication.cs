@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCodeSolutions.Problems.Operations
+namespace LeetCodeSolutions.Problems.TdaRational.Operations
 {
     public class Multiplication : Operation
     {

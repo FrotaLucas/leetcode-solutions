@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LeetCodeSolutions.Problems.Operations;
+﻿using LeetCodeSolutions.Problems.TdaRational.Operations;
 
-namespace LeetCodeSolutions.Problems
+namespace LeetCodeSolutions.Problems.TdaRational
 {
 
     //BEE 1022
@@ -14,12 +9,10 @@ namespace LeetCodeSolutions.Problems
         public string Inputs = "4; 1 / 2 + 3 / 4; 2 / 3 * 4 / 5; 6 / 8 - 1 / 4; 5 / 6 / 7 / 8";
         List<Operation> operations = OperationFactory.Create();
 
-
         public TdaRational() //depois tentar passar parametro pelo CTOR
         {
             
         }
-
 
         public void PrintResult()
         {
@@ -156,4 +149,6 @@ namespace LeetCodeSolutions.Problems
         }
 
     }
+
+
 }

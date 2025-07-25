@@ -1,22 +1,25 @@
-﻿namespace LeetCodeSolutions.Problems.Operations
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LeetCodeSolutions.Problems.TdaRational.Operations
 {
-    public class Addition : Operation
+    public class Subtraction : Operation
     {
-        public Addition()
-        {
-            TypeOperation = "+";
+
+        public Subtraction() {
+            TypeOperation = "-";
         }
 
         public override void DoOperation()
         {
-
             var n1 = int.Parse(Numerator1);
             var n2 = int.Parse(Numerator2);
-
             var d1 = int.Parse(Denominator1);
             var d2 = int.Parse(Denominator2);
 
-            //encontrar MDC
             int a = d1; int b = d2;
             while (b != 0)
             {
@@ -28,13 +31,10 @@
 
             int mmc = d1 * d2 / mdc;
 
-            int numerator = n1 * (mmc / d1) + n2 * (mmc / d2);
-            //result = $"{numerator}/{mmc}";
+            int numerator = n1 * (mmc / d1) - n2 * (mmc / d2);
 
-
-            //int sum = int.Parse(Numerator1) + int.Parse(Numerator2);
-
-            Console.WriteLine($"sum: {numerator}/{mmc} ");
+            Console.WriteLine($"Subtraction: {numerator}/{mmc}");
         }
     }
+
 }

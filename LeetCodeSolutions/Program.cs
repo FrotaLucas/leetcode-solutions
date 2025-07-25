@@ -1,6 +1,5 @@
 ﻿using System;
-using LeetCodeSolutions.Problems;
-
+using LeetCodeSolutions.Problems.TdaRational;
 
 
 class Program
