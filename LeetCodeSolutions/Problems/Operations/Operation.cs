@@ -3,7 +3,9 @@
     public class Operation
     {
         public string TypeOperation { get; set; } = string.Empty; //+, -, /, *
+
         public string Numerator1 { get; set; }
+
         public string Numerator2 { get; set; }
 
         public string Denominator1 { get; set; }
@@ -14,7 +16,7 @@
         {
 
         }
-        public Operation(string typeOperation, string numerator1, string numerator2, string denominator1, string denominator2)
+        public Operation(string typeOperation, string numerator1, string denominator1, string numerator2, string denominator2)
         {
             TypeOperation = typeOperation;
             Numerator1 = numerator1;

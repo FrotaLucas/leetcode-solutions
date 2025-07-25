@@ -77,6 +77,8 @@ namespace LeetCodeSolutions.Problems
 
             operation.Numerator1 = numerator1;
             operation.Numerator2 = numerator2;
+            operation.Denominator1 = denominator1;
+            operation.Denominator2 = denominator2;
 
             return operation;
         }
