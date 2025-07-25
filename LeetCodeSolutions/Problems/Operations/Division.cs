@@ -10,7 +10,7 @@ namespace LeetCodeSolutions.Problems.Operations
     {
         public Division() { 
         
-        
+            TypeOperation = "/"
         }
 
 
