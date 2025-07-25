@@ -6,7 +6,10 @@
         public string Numerator1 { get; set; }
         public string Numerator2 { get; set; }
 
+        public Operation()
+        {
 
+        }
         public Operation(string typeOperation, string numerator1, string numerator2)
         {
             TypeOperation = typeOperation;

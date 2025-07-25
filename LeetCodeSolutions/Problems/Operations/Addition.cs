@@ -2,12 +2,15 @@
 {
     public class Addition : Operation
     {
-        public Addition() : base("+", "numerator1", "numerator2") { }
+        public Addition()
+        {
+            TypeOperation = "+";
+        }
 
         public override void DoOperation()
         {
 
-            int sum = int.Parse(Numerator1 + Numerator2);
+            int sum = int.Parse(Numerator1) + int.Parse(Numerator2);
 
             Console.WriteLine("sum:" + sum);
         }

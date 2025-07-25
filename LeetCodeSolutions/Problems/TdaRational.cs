@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LeetCodeSolutions.Problems.Operations;
 
 namespace LeetCodeSolutions.Problems
 {
@@ -11,6 +12,7 @@ namespace LeetCodeSolutions.Problems
     public class TdaRational
     {
         public string Inputs = "4; 1 / 2 + 3 / 4; 2 / 3 * 4 / 5; 6 / 8 - 1 / 4; 5 / 6 / 7 / 8";
+        List<Operation> operations = OperationFactory.Create();
 
 
         public TdaRational() //depois tentar passar parametro pelo CTOR
@@ -42,33 +44,41 @@ namespace LeetCodeSolutions.Problems
                 Console.WriteLine(equation[i-1]);
             }
 
-            foreach (string part in equation) {
+            //foreach (string part in equation) {
 
 
-                //part[7] 7. elemento sempre eh a operacao
-                var result = Operation(part[7].ToString(), part[1].ToString(), part[5].ToString(), part[9].ToString(), part[13].ToString());
+            //    //part[7] 7. elemento sempre eh a operacao
+            //    var result = Operation(part[7].ToString(), part[1].ToString(), part[5].ToString(), part[9].ToString(), part[13].ToString());
 
-                    Console.WriteLine(result);
+            //        Console.WriteLine(result);
             
+            //}
+
+
+            foreach (string part in equation)
+            {
+                var operation = Run(part[7].ToString(), part[1].ToString(), part[5].ToString());
+                operation.DoOperation();
+
+            }
+           
+        }
+
+        private Operation Run(string typeOperation, string numerator1, string numerator2)
+        {
+            if (operations.Any(op => op.TypeOperation == typeOperation) == false)
+            {
+                throw new Exception("Operation not found");
             }
 
-            //List<Operation> operations = OperationFactory.Create();
 
-            //foreach (string part in equation)
-            //{
+            //Operation operation = operations.FirstOrDefault(op => op.TypeOperation.Equals(typeOperation));
+            Operation operation = operations.Single(op => op.TypeOperation == typeOperation);
 
-            //    var operation = Run(part[7].ToString(), part[1].ToString(), part[5].ToString());
+            operation.Numerator1 = numerator1;
+            operation.Numerator2 = numerator2;
 
-            //    operation.DoOperation();
-
-            //}
-
-
-            //public Operation Run(string typeOperation, string numerator1, string numerator2)
-            //{
-
-            //    operations.Any(var ope => ope.TypeOfOperation == typeOfOperation)
-            //}
+            return operation;
         }
 
         public string Operation(string @operator, string numerator1, string denominator1, string numerator2, string denominator2)
