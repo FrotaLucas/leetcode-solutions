@@ -52,6 +52,23 @@ namespace LeetCodeSolutions.Problems
             
             }
 
+            //List<Operation> operations = OperationFactory.Create();
+
+            //foreach (string part in equation)
+            //{
+
+            //    var operation = Run(part[7].ToString(), part[1].ToString(), part[5].ToString());
+
+            //    operation.DoOperation();
+
+            //}
+
+
+            //public Operation Run(string typeOperation, string numerator1, string numerator2)
+            //{
+
+            //    operations.Any(var ope => ope.TypeOfOperation == typeOfOperation)
+            //}
         }
 
         public string Operation(string @operator, string numerator1, string denominator1, string numerator2, string denominator2)
