@@ -14,19 +14,12 @@
 
         //construtor desse classe Operation que sera chamado ao criar classes filhas
         //sem ele, o construtor logo depois vai ser chamado levando a um erro pq nao tem parametro.
-        public Operation()
+        protected Operation()
         {
 
         }
 
-        public Operation(string typeOperation, string numerator1, string denominator1, string numerator2, string denominator2)
-        {
-            TypeOperation = typeOperation;
-            Numerator1 = numerator1;
-            Numerator2 = numerator2;
-            Denominator1 = denominator1;
-            Denominator2 = denominator2;
-        }
+
         public virtual void DoOperation() { }
     }
 }
