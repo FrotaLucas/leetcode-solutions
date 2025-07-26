@@ -8,6 +8,7 @@ namespace LeetCodeSolutions.Problems.TdaRationalV2.Operations
 {
     public abstract class Operation
     {
+        public string TypeOperation {  get; set; }
         public Operation()
         {
             
