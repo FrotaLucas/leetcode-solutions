@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace LeetCodeSolutions.Problems.TdaRationalV2.Operations
 {
-    public class Operation
+    public abstract class Operation
     {
+        public Operation()
+        {
+            
+        }
 
+        public abstract void DoOperation();
     }
 }
