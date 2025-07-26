@@ -10,7 +10,7 @@ namespace LeetCodeSolutions.Problems.TdaRationalV2.Operations
     {
         public override void DoOperation()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("execute addition ");
         }
     }
 }
