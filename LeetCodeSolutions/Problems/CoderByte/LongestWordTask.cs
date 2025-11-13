@@ -5,7 +5,7 @@ namespace LeetCodeSolutions.Problems.CoderByte
     public class LongestWordTask
     {
 
-        public string LongestWord(string sen)
+        public string Solve(string sen)
         {
             string[] array = sen.Split(' ');
             string longestWord = string.Empty;
