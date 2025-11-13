@@ -29,9 +29,6 @@ namespace LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV1
     {
         public string Inputs = "4; 1 / 2 + 3 / 4; 2 / 3 * 4 / 5; 6 / 8 - 1 / 4; 5 / 6 / 7 / 8";
         List<Operation> operations = OperationFactory.Create();
-        public TdaRationalTaskV1() //depois tentar passar parametro pelo CTOR
-        {
-        }
 
         public void Solve()
         {
