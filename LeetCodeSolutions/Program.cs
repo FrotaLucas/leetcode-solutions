@@ -1,22 +1,14 @@
 ﻿using System;
-using LeetCodeSolutions.Problems.TdaRationalV2;
-//using LeetCodeSolutions.Problems.TdaRationalV1;
+using LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV1;
+using LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV2;
+using LeetCodeSolutions.Problems.CoderByte;
 
 
-class Program
-{
 
-    static void Main(string[] args)
-    {
-
-        //var TdaRational = new TdaRational();
-        var tdaRational = new TdaRational();
-        tdaRational.PrintResult();
+var tda1 = new TdaRationalTaskV1();
+tda1.Solve();
 
 
-        //TdaRational.PrintResult();
+var tda2 =  new TdaRationalTaskV2();
+tda2.Solve();
 
-    }
-
-
-}

@@ -1,4 +1,6 @@
-﻿namespace LeetCodeSolutions.Problems.TdaRationalV1.Operations
+﻿using LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV1.Operations;
+
+namespace LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV1.Operations
 {
     public class OperationFactory
     {

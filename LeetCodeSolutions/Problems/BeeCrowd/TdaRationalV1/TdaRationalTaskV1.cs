@@ -1,6 +1,6 @@
-﻿using LeetCodeSolutions.Problems.TdaRationalV1.Operations;
+﻿using LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV1.Operations;
 
-namespace LeetCodeSolutions.Problems.TdaRationalV1
+namespace LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV1
 {
 
     //BEE 1022

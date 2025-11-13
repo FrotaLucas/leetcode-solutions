@@ -1,4 +1,4 @@
-﻿namespace LeetCodeSolutions.Problems.TdaRationalV1.Operations
+﻿namespace LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV1.Operations
 {
     public class Division : Operation
     {

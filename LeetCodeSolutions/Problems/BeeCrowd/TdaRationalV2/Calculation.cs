@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LeetCodeSolutions.Problems.TdaRationalV2.Operations;
+using LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV2.Operations;
 
-namespace LeetCodeSolutions.Problems.TdaRationalV2
+namespace LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV2
 {
     public class Calculation
     {
