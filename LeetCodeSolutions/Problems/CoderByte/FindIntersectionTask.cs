@@ -24,7 +24,7 @@ namespace LeetCodeSolutions.Problems.CoderByte
 
     public class FindIntersectionTask
     {
-        public string FindIntersection(string[] strArr)
+        public string Solve(string[] strArr)
         {
             var firstString = strArr[0].Split(",");
             var secondString = strArr[1].Split(",");
@@ -42,7 +42,8 @@ namespace LeetCodeSolutions.Problems.CoderByte
 
         }
     
-        public string FindInterSectionV2(string[] strArr)
+        //better performance
+        public string SolveV2(string[] strArr)
         {
             var firstString = strArr[0].Split(',')
                 .Select(s => s.Trim())
