@@ -10,6 +10,8 @@ namespace LeetCodeSolutions.Problems.StringV1
     {
         //find the missing caracther
 
+
+        //string[] list = ["programation", "programation", "programation", "programaion", "programation"];
         public void Solve(string[] list)
         {
             // encontra a menor e a maior palavra
