@@ -8,15 +8,15 @@ using LeetCodeSolutions.Problems.TdaRationalV2.Operations;
 
 namespace LeetCodeSolutions.Problems.TdaRationalV2
 {
-    public class TdaRational
+    public class TdaRationalTaskV2
     {
         public string Inputs = "4; 1 / 2 + 3 / 4; 2 / 3 * 4 / 5; 6 / 8 - 1 / 4; 5 / 6 / 7 / 8";
-        public TdaRational()
+        public TdaRationalTaskV2()
         {
             
         }
 
-        public void PrintResult()
+        public void Solve()
         {
 
             var calculation = new Calculation();

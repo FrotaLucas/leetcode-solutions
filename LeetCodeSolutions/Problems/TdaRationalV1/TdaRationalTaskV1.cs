@@ -4,17 +4,36 @@ namespace LeetCodeSolutions.Problems.TdaRationalV1
 {
 
     //BEE 1022
-    public class TdaRational
+
+    /// <summary>
+    /// You were invited to do a little job for your Mathematic teacher. The job is to read a Mathematic expression in format of two rational 
+    /// numbers (numerator / denominator) and present the result of the operation. Each operand or operator is separated by a blank space.
+    /// The input sequence (each line) must respect the following format: number, (‘/’ char), number, 
+    /// operation char (‘/’, ‘*’, ‘+’, ‘-‘), number, (‘/’ char), number. The answer must be presented followed by ‘=’ operator and 
+    /// the simplified answer. If the answer can’t be simplified, it must be repeated after a ‘=’ operator.
+
+    // Considering N1 and D1 as numerator and denominator of the first fraction, follow the orientation about how to do each one of these 4 operations:
+
+    //Sum: (N1* D2 + N2* D1) / (D1* D2)
+    //Subtraction: (N1* D2 - N2* D1) / (D1* D2)
+    //Multiplication: (N1* N2) / (D1* D2)
+    // Division: (N1/D1) / (N2/D2), that means(N1* D2)/(N2* D1)
+    //Input
+    //The input contains several cases of test.The first value is an integer N(1 ≤ N ≤ 1*104), indicating the amount of cases of test that must be read.Each case of test contains a rational value X(1 ≤ X ≤ 1000), an operation(-, +, * or /) and another rational value Y(1 ≤ Y ≤ 1000).
+
+    //Output
+    //The output must be a rational number, followed by a “=“ sign and another rational number, that is the simplification
+    //of the first value.In case of the first value can’t be simplified, the same value must be repeated after the ‘=’ sign.
+    /// </summary>
+    public class TdaRationalTaskV1
     {
         public string Inputs = "4; 1 / 2 + 3 / 4; 2 / 3 * 4 / 5; 6 / 8 - 1 / 4; 5 / 6 / 7 / 8";
         List<Operation> operations = OperationFactory.Create();
-
-        public TdaRational() //depois tentar passar parametro pelo CTOR
+        public TdaRationalTaskV1() //depois tentar passar parametro pelo CTOR
         {
-            
         }
 
-        public void PrintResult()
+        public void Solve()
         {
 
             //Liskov priciple 
@@ -35,7 +54,7 @@ namespace LeetCodeSolutions.Problems.TdaRationalV1
             for (int i = 1; i <= n; i++)
             {
                 equation[i - 1] = parts[i];
-                Console.WriteLine(equation[i-1]);
+                Console.WriteLine(equation[i - 1]);
             }
 
             //foreach (string part in equation) {
@@ -45,7 +64,7 @@ namespace LeetCodeSolutions.Problems.TdaRationalV1
             //    var result = Operation(part[7].ToString(), part[1].ToString(), part[5].ToString(), part[9].ToString(), part[13].ToString());
 
             //        Console.WriteLine(result);
-            
+
             //}
 
 
@@ -55,7 +74,7 @@ namespace LeetCodeSolutions.Problems.TdaRationalV1
                 operation.DoOperation();
 
             }
-           
+
         }
 
         private Operation Run(string typeOperation, string numerator1, string denominator1, string numerator2, string denominator2)
@@ -82,7 +101,7 @@ namespace LeetCodeSolutions.Problems.TdaRationalV1
 
             string result = "default";
 
-            if(@operator == "+")
+            if (@operator == "+")
             {
                 var n1 = int.Parse(numerator1);
                 var n2 = int.Parse(numerator2);
@@ -91,8 +110,8 @@ namespace LeetCodeSolutions.Problems.TdaRationalV1
                 var d2 = int.Parse(denominator2);
 
                 //encontrar MDC
-                int a = d1; int b = d2; 
-                while ( b != 0)
+                int a = d1; int b = d2;
+                while (b != 0)
                 {
                     int temp = b;
                     b = a % b;
@@ -100,47 +119,51 @@ namespace LeetCodeSolutions.Problems.TdaRationalV1
                 }
                 int mdc = a;
 
-                int mmc = d1*d2/mdc;
+                int mmc = d1 * d2 / mdc;
 
-                int numerator = n1 * (mmc/ d1) + n2 * (mmc / d2);
+                int numerator = n1 * (mmc / d1) + n2 * (mmc / d2);
                 result = $"{numerator}/{mmc}";
 
             }
 
-            if (@operator == "-") { 
-            
+            if (@operator == "-")
+            {
+
                 var n1 = int.Parse(numerator1);
-                var n2 = int.Parse (numerator2);
+                var n2 = int.Parse(numerator2);
                 var d1 = int.Parse(denominator1);
                 var d2 = int.Parse(denominator2);
 
                 int a = d1; int b = d2;
-                while (b != 0) {
+                while (b != 0)
+                {
                     int temp = b;
                     b = a % b;
                     a = temp;
                 }
                 int mdc = a;
 
-                int mmc = d1*d2/mdc;
+                int mmc = d1 * d2 / mdc;
 
-                int numerator = n1*(mmc/d1) - n2*(mmc/d2);
+                int numerator = n1 * (mmc / d1) - n2 * (mmc / d2);
                 result = $"{numerator}/{mmc}";
             }
 
 
-            if (@operator == "*"){
+            if (@operator == "*")
+            {
 
                 int numerator = int.Parse(numerator1) * int.Parse(numerator2);
-                var denominator = int.Parse(denominator1)*int.Parse(denominator2);
+                var denominator = int.Parse(denominator1) * int.Parse(denominator2);
 
                 result = $"{numerator}/{denominator}";
 
             }
 
-            if (@operator == "/") { 
-                int numerator = int.Parse(numerator1)*int.Parse(denominator2);
-                int denominator = int.Parse(denominator1)*int.Parse(numerator2);
+            if (@operator == "/")
+            {
+                int numerator = int.Parse(numerator1) * int.Parse(denominator2);
+                int denominator = int.Parse(denominator1) * int.Parse(numerator2);
 
                 result = $"{numerator}/{denominator}";
             }
