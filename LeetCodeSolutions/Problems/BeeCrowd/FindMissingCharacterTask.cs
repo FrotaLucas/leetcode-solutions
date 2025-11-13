@@ -36,7 +36,5 @@ namespace LeetCodeSolutions.Problems.StringV1
                 Console.WriteLine("Missing letter is: " + big[i]);
             }
         }
-
-
     }
 }
