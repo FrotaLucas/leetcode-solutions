@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LeetCodeSolutions.Problems.StringV1
 {
-    public class FindMissingCharacter
+    public class FindMissingCharacterTask
     {
         //find the missing caracther
 
