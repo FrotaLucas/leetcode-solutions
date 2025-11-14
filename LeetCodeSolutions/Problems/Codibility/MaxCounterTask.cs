@@ -51,11 +51,7 @@
                 }
 
                 else
-                {
                     Array.Fill(result, maxCounter);
-
-
-                }
             }
 
             return result;
