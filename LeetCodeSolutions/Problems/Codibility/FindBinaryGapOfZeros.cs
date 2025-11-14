@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LeetCodeSolutions.Problems.Codibility
 {
-    public class FindBinaryGap
+    public class FindBinaryGapOfZeros
     {
         public int Solve(int number)
         {

@@ -13,6 +13,6 @@ using LeetCodeSolutions.Problems.Codibility;
 //var tda2 =  new TdaRationalTaskV2();
 //tda2.Solve();
 
-var binary = new FindBinaryGap();
+var binary = new FindBinaryGapOfZeros();
 //binary.Solve(9);
 binary.Solve(1041);
