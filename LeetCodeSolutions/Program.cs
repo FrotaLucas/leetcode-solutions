@@ -18,6 +18,10 @@ var binary = new FindBinaryGapOfZerosTask();
 //binary.Solve(1041);
 
 var permutation = new CheckPermutationTask();
-permutation.Solve([2, 3, 5, 1]);
+//permutation.Solve([2, 3, 5, 1]);
 //permutation.SolveV2([2, 3, 15, 1]);
-permutation.SolveV2([2, 1, 15, 1, 3]);
+//permutation.SolveV2([2, 1, 15, 1, 3]);
+
+
+var maxCounter = new MaxCounterTask();
+maxCounter.Solve( 5 ,[3, 4, 4, 6, 1, 4, 4]);
