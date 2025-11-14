@@ -22,6 +22,21 @@ namespace LeetCodeSolutions.Problems.Codibility
             return true;
         }
 
+        //solution with HashSet - get unique Data
+        public bool SolveV2(int[] A)
+        {
+            var occurances = new HashSet<int>();
+
+            foreach(int elem in A)
+            {
+                if(elem < A.Length)
+                    occurances.Add(elem);
+            }
+
+            if(occurances.Count == A.Length)
+                return true;
+            return false;
+        }
 
     }
 }

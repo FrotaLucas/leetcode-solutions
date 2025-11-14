@@ -19,3 +19,5 @@ var binary = new FindBinaryGapOfZeros();
 
 var permutation = new CheckPermutation();
 permutation.Solve([2, 3, 5, 1]);
+//permutation.SolveV2([2, 3, 15, 1]);
+permutation.SolveV2([2, 1, 15, 1, 3]);
