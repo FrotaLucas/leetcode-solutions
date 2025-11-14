@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LeetCodeSolutions.Problems.Codibility
 {
-    public class CheckPermutation
+    public class CheckPermutationTask
     {
         public bool Solve(int[] A)
         {
