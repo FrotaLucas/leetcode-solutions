@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LeetCodeSolutions.Problems.Codibility
+﻿namespace LeetCodeSolutions.Problems.Codibility
 {
 
     //T2 max Counter
@@ -38,7 +32,7 @@ namespace LeetCodeSolutions.Problems.Codibility
     public class MaxCounterTask
     {
 
-        int[] A = new int[]{ 3, 4, 4, 6, 1, 4, 4 };
+        //int[] A = new int[]{ 3, 4, 4, 6, 1, 4, 4 };
         public int[] Solve(int N, int[] A)
         {
             var result = new int[N];
