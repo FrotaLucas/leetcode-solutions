@@ -38,5 +38,32 @@ namespace LeetCodeSolutions.Problems.Codibility
     public class MaxCounterTask
     {
 
+        int[] A = new int[]{ 3, 4, 4, 6, 1, 4, 4 };
+        public int[] Solve(int N, int[] A)
+        {
+            var result = new int[N];
+            //var result = new int[N];
+
+            int maxCounter = 0;
+            for(int i = 0; i< A.Length; i++)
+            {
+                if (A[i] > 1 && A[i] < N)
+                {
+                    result[A[i]-1]++;
+
+                    if(result[A[i]-1] > maxCounter)
+                        maxCounter = result[A[i]-1];
+
+                }
+
+                else
+                {
+                    result.Select(i => i=maxCounter);
+
+                }
+            }
+
+            return result;
+        }
     }
 }
