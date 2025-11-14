@@ -27,11 +27,25 @@ namespace LeetCodeSolutions.Problems.Codibility
 
         // N is an integer within the range [1..100,000];
         // each element of array A is an integer within the range [−1,000,000..1,000,000].
-
+        
+        //NOTES:  should be missisng only 1 single number!!
+       
+        //int[] A = new int[] { 1, 2, 3, 5, 7, 6 };
         public int Solve(int[] A)
         {
+            //var sortedArray = A.Order();
+            A.Order();
 
-            return 0;
+            if (A.Max() < 0 || A.Max() > 1)
+                return 1;
+
+            for (int i = 0; i< A.Length-1; i++)
+            {
+                if (A[i + 1] - A[i] > 1 && A[i] >=0)
+                    return A[i] + 1;
+            }
+
+            return 1;
         }
     }
 }
