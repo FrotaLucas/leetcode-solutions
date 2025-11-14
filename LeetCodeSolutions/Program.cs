@@ -6,13 +6,16 @@ using LeetCodeSolutions.Problems.Codibility;
 
 
 
-//var tda1 = new TdaRationalTaskV1();
+var tda1 = new TdaRationalTaskV1();
 //tda1.Solve();
 
 
-//var tda2 =  new TdaRationalTaskV2();
+var tda2 = new TdaRationalTaskV2();
 //tda2.Solve();
 
 var binary = new FindBinaryGapOfZeros();
 //binary.Solve(9);
-binary.Solve(1041);
+//binary.Solve(1041);
+
+var permutation = new CheckPermutation();
+permutation.Solve([2, 3, 5, 1]);
