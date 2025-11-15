@@ -24,4 +24,9 @@ var permutation = new CheckPermutationTask();
 
 
 var maxCounter = new MaxCounterTask();
-maxCounter.Solve( 5 ,[3, 4, 4, 6, 1, 4, 4]);
+//maxCounter.Solve( 5 ,[3, 4, 4, 6, 1, 4, 4]);
+
+var small = new FindSmallestTask();
+var result = small.Solve([-1, -2, -3, -3, 0, 1, 2, 3]);
+var result2 = small.SolveV2([0,1,2,3]);
+Console.WriteLine(result);

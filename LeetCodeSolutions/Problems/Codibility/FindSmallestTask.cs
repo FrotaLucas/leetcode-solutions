@@ -34,18 +34,37 @@ namespace LeetCodeSolutions.Problems.Codibility
         public int Solve(int[] A)
         {
             //var sortedArray = A.Order();
-            A.Order();
+            var sortedArray = A.Order().Where( x => x > 0 ).ToArray();
 
-            if (A.Max() < 0 || A.Max() > 1)
-                return 1;
 
-            for (int i = 0; i< A.Length-1; i++)
+            for (int i = 0; i< sortedArray.Length-1; i++)
             {
                 if (A[i + 1] - A[i] > 1 && A[i] >=0)
                     return A[i] + 1;
             }
 
-            return 1;
+            return sortedArray.Length+1;
+        }
+
+        //better performance
+        public int SolveV2(int[] A)
+        {
+            var occurances = new HashSet<int>();    
+
+            foreach(var elem in A)
+            {
+                if(elem>=0)
+                    occurances.Add(elem);
+            }
+
+            for (int i = 0; i< occurances.Count; i++)
+            {
+                //Order(1) good performance
+                if (!occurances.Contains(i))
+                    return i;
+            }
+
+            return occurances.Count;
         }
     }
 }
