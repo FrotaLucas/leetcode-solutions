@@ -32,12 +32,21 @@ namespace LeetCodeSolutions.Problems.Codibility
     // after the second jump, at position 10 + 30 + 30 = 70
     // after the third jump, at position 10 + 30 + 30 + 30 = 100
     // Write an efficient algorithm for the following assumptions:
-    public class FrogMinimalJumps
+    public class FrogMinJumps
     {
         public int Solve(int x, int y, int d)
         {
 
-            return 0;
+            int yf = x;
+            int totSteps = 0;
+
+            while(yf <= y)
+            {
+                yf = yf + d;
+                totSteps++;
+            }
+
+            return totSteps;
         }
     }
 }
