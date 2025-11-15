@@ -12,11 +12,11 @@ namespace LeetCodeSolutions.Problems.Codibility
         public int Solve(int[]A)
         {
             var n  = A.Length;
-            var refSummUp = n * (n + 1) / 2;
+            var upperSummup = (n +1)* (n + 1 + 1) / 2;
 
             var realSummup = A.Sum();
 
-            var missingValue = refSummUp - realSummup;
+            var missingValue = upperSummup - realSummup;
 
             return missingValue;
 
