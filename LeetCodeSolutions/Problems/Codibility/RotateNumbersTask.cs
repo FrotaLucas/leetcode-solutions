@@ -23,8 +23,23 @@ namespace LeetCodeSolutions.Problems.Codibility
     {
         public int[] Solve(int[]A, int k)
         {
+            int n = A.Length;
             int[] rotate = A;
+        
+            for (int i = 0; i < n; i++)
+            {
+                if (i + k < n)
+                    rotate[i] = A[i + k];
 
+                else
+                {
+                    var rest = n - 1 - i;
+                    var j = k - rest;
+                    rotate[j] = A[i];
+                }
+            }
+
+            Console.WriteLine(rotate);
             return rotate;
         }
     }
