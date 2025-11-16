@@ -54,14 +54,12 @@ namespace LeetCodeSolutions.Problems.Codibility
                 {
                     pos = pos + N;
                     tot++;
-                    Console.WriteLine(pos);
                 }
 
                 if( pos + N == chocolates )
                 {
                     pos = pos + N;
                     tot++;
-                    Console.WriteLine(tot);
                     return tot;
                 }
 
@@ -70,8 +68,6 @@ namespace LeetCodeSolutions.Problems.Codibility
                     var rest = chocolates -pos;
                     var initialPos = N - rest;
                     pos = initialPos;
-                    Console.WriteLine(pos);
-
                     tot++;
 
                 }
@@ -79,6 +75,22 @@ namespace LeetCodeSolutions.Problems.Codibility
             }
 
             return tot;
+        }
+
+        //more correctness
+        public int SolveV2(int chocolates, int N)
+        {
+            var eaten = new HashSet<int>();
+            var current = 0;
+
+            while(!eaten.Contains(current))
+            {
+                eaten.Add(current);
+                current = (current + chocolates) % N;
+                   
+            }
+
+            return eaten.Count;
         }
     }
 }
