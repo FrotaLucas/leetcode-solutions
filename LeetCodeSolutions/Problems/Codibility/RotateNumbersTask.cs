@@ -24,22 +24,31 @@ namespace LeetCodeSolutions.Problems.Codibility
         public int[] Solve(int[]A, int k)
         {
             int n = A.Length;
-            int[] rotate = A;
-        
-            for (int i = 0; i < n; i++)
+
+            //ERRO GRAVE. rotate nao esta recebendo valores de A. Esta recebendo referencia. Logo cada elemento de rotate
+            //vai sempre apontar para seu correspondente em A.
+            //int[] rotate = A;
+
+            //CORRETO
+            int[] rotate = new int[n];
+
+            for(int j=0; j < n; j++)
             {
-                if (i + k < n)
-                    rotate[i] = A[i + k];
+                var i = j + k;
+
+                if(i< n)
+                    rotate[i] = A[j];
 
                 else
                 {
-                    var rest = n - 1 - i;
-                    var j = k - rest;
-                    rotate[j] = A[i];
+                    var rest = n - 1 - j;
+                    i = k - rest-1;
+                    rotate[i] = A[j];
                 }
             }
 
-            Console.WriteLine(rotate);
+            rotate.ToList().ForEach( x => Console.WriteLine(x));    
+
             return rotate;
         }
     }
