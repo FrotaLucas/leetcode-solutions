@@ -50,18 +50,29 @@ namespace LeetCodeSolutions.Problems.Codibility
 
             while ( pos != chocolates)
             {
-                if ( pos <= chocolates )
+                if ( pos + N <= chocolates )
                 {
                     pos = pos + N;
                     tot++;
+                    Console.WriteLine(pos);
                 }
 
-                else 
+                if( pos + N == chocolates )
                 {
-                    var rest = pos - chocolates;
+                    pos = pos + N;
+                    tot++;
+                    Console.WriteLine(tot);
+                    return tot;
+                }
+
+                if ( pos + N > chocolates ) 
+                {
+                    var rest = chocolates -pos;
                     var initialPos = N - rest;
                     pos = initialPos;
-                    tot ++;
+                    Console.WriteLine(pos);
+
+                    tot++;
 
                 }
 
