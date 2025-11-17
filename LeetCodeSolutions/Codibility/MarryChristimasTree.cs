@@ -11,39 +11,33 @@ namespace LeetCodeSolutions.Codibility
     {
         public void Solve(int height)
         {
-            //string baseWidth = string.Empty;
-
             string tree = string.Empty;
 
-            //for(int b = 0; b < 2*height; b++)
-            //{
-            //    baseWidth = baseWidth + "*";
-            //}
-
-            
-            int baseWidth = 2*height;
-            int dots = 0;
+            int emptyWidth = 2*height;
+            int filledWith = 0;
 
             for (int i = 0; i < height; i++)
             {
-                var width = string.Empty;
+                var str = string.Empty;
 
-                for(int j = baseWidth -1; j >=0; j--)
+                for(int j = emptyWidth -1; j >=0; j--)
                 {
-                    width = width + " ";
+                    str = str + " ";
                 }
 
-                dots = 2*height - baseWidth;
-                for(int p=0; p <= dots; p++)
+                filledWith = 2*height - emptyWidth;
+                for(int p=0; p <= 2*filledWith; p++)
                 {
-                    width = width + "*";
+                    str = str + "*";
                 }
 
-                baseWidth--;
+                emptyWidth--;
 
-                var layer = width + "\n";
+                var layer = str + "\n";
                 tree = tree + layer;
             }
+            //Console.WriteLine($"final emptyWidth:{emptyWidth}");
+            //Console.WriteLine($"final filledWidth:{2*filledWith}");
 
             Console.WriteLine(tree);
         }
