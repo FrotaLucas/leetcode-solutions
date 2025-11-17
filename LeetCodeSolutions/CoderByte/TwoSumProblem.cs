@@ -21,11 +21,39 @@ namespace LeetCodeSolutions.CoderByte
     /// </summary>
     public class TwoSumProblem
     {
-        public int[] Solve(int[]A, int x)
+
+        //lower performance O(n^2)
+        public List<int[]> Solve(int[] A, int x)
         {
-            int[] peers = default!;
+            //int[] peers = default!;
+            var peers = new List<int[]>();
+            int n = A.Length;
+
+
+            for(int i = 0; i<n; i++)
+            {
+                for(int j = 0; j<n; j++)
+                {
+                    if (A[i] + A[j] == x)
+                    {
+                        //op1
+                        //var peer = new int[] { A[i], A[j] };
+
+                        //op2
+                        var peer = new int[2];
+                        peer[0] = A[i];
+                        peer[1] = A[j];
+
+                        peers.Add(peer);
+                    }
+                }
+            }
+            
+            peers.ForEach( elem => elem.ToList().ForEach( array => Console.WriteLine(array) );    
 
             return peers; 
         }
+
+        //better performance
     }
 }
