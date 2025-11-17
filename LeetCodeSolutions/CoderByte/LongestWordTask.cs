@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace LeetCodeSolutions.Problems.CoderByte
+namespace LeetCodeSolutions.CoderByte
 {
     public class LongestWordTask
     {

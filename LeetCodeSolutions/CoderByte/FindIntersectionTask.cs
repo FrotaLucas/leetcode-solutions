@@ -8,7 +8,7 @@ using Microsoft.VisualBasic;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Xml.Linq;
 
-namespace LeetCodeSolutions.Problems.CoderByte
+namespace LeetCodeSolutions.CoderByte
 {
 
 

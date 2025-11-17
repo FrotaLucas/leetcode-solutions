@@ -1,7 +1,7 @@
 ﻿using System;
 using LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV1;
 using LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV2;
-using LeetCodeSolutions.Problems.CoderByte;
+using LeetCodeSolutions.CoderByte;
 using LeetCodeSolutions.Codibility;
 
 
