@@ -48,4 +48,4 @@ var rotation = new RotateNumbersTask();
 
 
 var christmasTree = new MarryChristimasTree();
-christmasTree.Solve(10);
+christmasTree.Solve(30);

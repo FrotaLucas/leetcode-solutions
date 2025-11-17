@@ -11,6 +11,8 @@ namespace LeetCodeSolutions.Codibility
     {
         public void Solve(int height)
         {
+            Console.WriteLine("Happy Mary Christimas!!!\n");
+
             string tree = string.Empty;
 
             int emptyWidth = 2*height;
