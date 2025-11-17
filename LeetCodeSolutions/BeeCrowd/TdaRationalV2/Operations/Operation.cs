@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV2.Operations
+namespace LeetCodeSolutions.BeeCrowd.TdaRationalV2.Operations
 {
     public abstract class Operation
     {
