@@ -2,7 +2,7 @@
 using LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV1;
 using LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV2;
 using LeetCodeSolutions.Problems.CoderByte;
-using LeetCodeSolutions.Problems.Codibility;
+using LeetCodeSolutions.Codibility;
 
 
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCodeSolutions.Problems.Codibility
+namespace LeetCodeSolutions.Codibility
 {
     // The goal is to rotate array A K times; that is, each element of A will be shifted to the right K times.
 

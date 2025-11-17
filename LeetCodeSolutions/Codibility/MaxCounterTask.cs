@@ -1,4 +1,4 @@
-﻿namespace LeetCodeSolutions.Problems.Codibility
+﻿namespace LeetCodeSolutions.Codibility
 {
 
     //T2 max Counter

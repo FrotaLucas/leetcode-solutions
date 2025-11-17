@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCodeSolutions.Problems.Codibility
+namespace LeetCodeSolutions.Codibility
 {
     // list of integers no nullable
     public class FindMissingInteger

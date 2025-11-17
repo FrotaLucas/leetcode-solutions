@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCodeSolutions.Problems.Codibility
+namespace LeetCodeSolutions.Codibility
 {
     //print a christimas tree with given height 
     public class MarryChristimasTree
