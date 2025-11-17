@@ -1,5 +1,4 @@
-﻿using System;
-using LeetCodeSolutions.BeeCrowd.TdaRationalV1;
+﻿using LeetCodeSolutions.BeeCrowd.TdaRationalV1;
 using LeetCodeSolutions.BeeCrowd.TdaRationalV2;
 using LeetCodeSolutions.CoderByte;
 using LeetCodeSolutions.Codibility;
@@ -48,4 +47,7 @@ var rotation = new RotateNumbersTask();
 
 
 var christmasTree = new MarryChristimasTree();
-christmasTree.Solve(30);
+//christmasTree.Solve(30);
+
+var twoSum = new TwoSumProblem();
+twoSum.Solve([3, 5, 2, -4, 8, 11], 7);
