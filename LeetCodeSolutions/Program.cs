@@ -26,6 +26,26 @@ var permutation = new CheckPermutationTask();
 var maxCounter = new MaxCounterTask();
 //maxCounter.Solve( 5 ,[3, 4, 4, 6, 1, 4, 4]);
 
+var missingInteger = new FindMissingInteger();
+//missingInteger.Solve([2, 4, 5, 1]);
+
+
 var small = new FindSmallestTask();
 //small.Solve([-1, -2, -3, -3, 0, 1, 2, 3]);
 //small.SolveV2([0,1,2,3]);
+
+var unpaired = new FindUnpairedTask();
+unpaired.Solve([2, 3, 1, 4, 4, 1, 3]);
+unpaired.Solve([2, 3, 1, 4, 2, 5, 4, 1, 3]);
+
+
+var chocolates = new CountChocolate();
+chocolates.Solve(13, 4);
+
+
+var rotation = new RotateNumbersTask();
+//rotation.Solve([3, 8, 9, 7, 6], 3);
+
+
+var christmasTree = new MarryChristimasTree();
+christmasTree.Solve(10);
