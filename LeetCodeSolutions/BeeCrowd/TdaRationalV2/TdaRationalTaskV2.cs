@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
-using LeetCodeSolutions.Problems.BeeCrowd.TdaRationalV2.Operations;
+using LeetCodeSolutions.BeeCrowd.TdaRationalV2.Operations;
 
 namespace LeetCodeSolutions.BeeCrowd.TdaRationalV2
 {
