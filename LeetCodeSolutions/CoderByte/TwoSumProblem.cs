@@ -48,8 +48,8 @@ namespace LeetCodeSolutions.CoderByte
                     }
                 }
             }
-            
-            peers.ForEach( elem => elem.ToList().ForEach( array => Console.WriteLine(array) );    
+
+            peers.ForEach(elem => elem.ToList().ForEach(array => Console.WriteLine(array)));
 
             return peers; 
         }
