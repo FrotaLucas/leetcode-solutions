@@ -66,10 +66,9 @@ namespace LeetCodeSolutions.CoderByte
                 {
                     if (A[i] + A[j] == x)
                     {
-                        string key = $"{A[i]}{A[j]}";
+                        string key = A[i] > A[j] ? $"{A[i]}{A[j]}" : $"{A[j]}{A[i]}";
 
-
-                        if(keys.Add(key))
+                        if (keys.Add(key))
                         {
                             var peer = new int[] {A[i], A[j] };
                             peers.Add(peer) ;
