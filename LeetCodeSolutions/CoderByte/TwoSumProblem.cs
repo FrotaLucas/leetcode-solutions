@@ -32,7 +32,7 @@ namespace LeetCodeSolutions.CoderByte
 
             for(int i = 0; i<n; i++)
             {
-                for(int j = 0; j<n; j++)
+                for(int j = i+1; j<n; j++)
                 {
                     if (A[i] + A[j] == x)
                     {
@@ -52,6 +52,17 @@ namespace LeetCodeSolutions.CoderByte
             peers.ForEach(elem => elem.ToList().ForEach(array => Console.WriteLine(array)));
 
             return peers; 
+        }
+
+        public int[] SolveV3(int[] A, int x) 
+        {
+            var keys = new HashSet<int>();
+            int[] peers = default!;
+
+
+
+
+            return peers;
         }
 
         //better performance
