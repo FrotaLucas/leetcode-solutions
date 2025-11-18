@@ -22,7 +22,18 @@ namespace LeetCodeSolutions.CoderByte
     public class TwoSumProblem
     {
 
-        //lower performance O(n^2)
+
+        //1 better performance
+        public List<int[]> Solve(int[]A, int x)
+        {
+            List<int[]> peers = new List<int[]>();
+
+
+            return peers;
+        }
+
+        
+        //2 lower performance O(n^2)
         public List<int[]> SolveV3(int[] A, int x)
         {
             //int[] peers = default!;
@@ -30,9 +41,9 @@ namespace LeetCodeSolutions.CoderByte
             int n = A.Length;
 
 
-            for(int i = 0; i<n; i++)
+            for (int i = 0; i < n; i++)
             {
-                for(int j = i+1; j<n; j++)
+                for (int j = i + 1; j < n; j++)
                 {
                     if (A[i] + A[j] == x)
                     {
@@ -51,18 +62,18 @@ namespace LeetCodeSolutions.CoderByte
 
             peers.ForEach(elem => elem.ToList().ForEach(array => Console.WriteLine(array)));
 
-            return peers; 
+            return peers;
         }
 
-        public List<int[]> SolveV2(int[] A, int x) 
+        public List<int[]> SolveV2(int[] A, int x)
         {
             var keys = new HashSet<string>();
             List<int[]> peers = new List<int[]>();
-            int n = A.Length;   
+            int n = A.Length;
 
-            for(int i = 0; i< n; i++)
+            for (int i = 0; i < n; i++)
             {
-                for(int j = 0; j<n; j++)
+                for (int j = 0; j < n; j++)
                 {
                     if (A[i] + A[j] == x)
                     {
@@ -70,8 +81,8 @@ namespace LeetCodeSolutions.CoderByte
 
                         if (keys.Add(key))
                         {
-                            var peer = new int[] {A[i], A[j] };
-                            peers.Add(peer) ;
+                            var peer = new int[] { A[i], A[j] };
+                            peers.Add(peer);
                         }
                     }
                 }
@@ -82,7 +93,5 @@ namespace LeetCodeSolutions.CoderByte
 
             return peers;
         }
-
-        //better performance
     }
 }
