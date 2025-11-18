@@ -23,7 +23,7 @@ namespace LeetCodeSolutions.CoderByte
     {
 
         //lower performance O(n^2)
-        public List<int[]> Solve(int[] A, int x)
+        public List<int[]> SolveV3(int[] A, int x)
         {
             //int[] peers = default!;
             var peers = new List<int[]>();
@@ -54,13 +54,32 @@ namespace LeetCodeSolutions.CoderByte
             return peers; 
         }
 
-        public int[] SolveV3(int[] A, int x) 
+        public List<int[]> SolveV2(int[] A, int x) 
         {
-            var keys = new HashSet<int>();
-            int[] peers = default!;
+            var keys = new HashSet<string>();
+            List<int[]> peers = new List<int[]>();
+            int n = A.Length;   
+
+            for(int i = 0; i< n; i++)
+            {
+                for(int j = 0; j<n; j++)
+                {
+                    if (A[i] + A[j] == x)
+                    {
+                        string key = $"{A[i]}{A[j]}";
 
 
+                        if(keys.Add(key))
+                        {
+                            var peer = new int[] {A[i], A[j] };
+                            peers.Add(peer) ;
+                        }
+                    }
+                }
+            }
 
+
+            peers.ForEach(elem => elem.ToList().ForEach(array => Console.WriteLine(array)));
 
             return peers;
         }
