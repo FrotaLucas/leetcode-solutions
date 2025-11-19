@@ -23,17 +23,59 @@ namespace LeetCodeSolutions.CoderByte
     {
 
 
-        //1 better performance
-        public List<int[]> Solve(int[]A, int x)
+        //1 better performance O(n)
+        //return list of Tuple OR list of Array
+        public List<(int, int)> Solve(int[] A, int x)
         {
-            List<int[]> peers = new List<int[]>();
+            var seen = new HashSet<int>();
+            var result = new List<(int, int)>();
 
+            foreach (var num in A)
+            {
+                int complement = x - num;
 
-            return peers;
+                if (seen.Contains(complement))
+                {
+                    result.Add((num, complement));
+                }
+
+                seen.Add(num);
+            }
+
+            //tuples
+            result.ForEach(pair => Console.WriteLine($"[{pair.Item1}, {pair.Item2}]"));
+
+            return result;
         }
 
-        
+        //list of tuple OR list of array 
+        public List<(int, int)> SolveV1(int[] A, int x)
+        {
+            var hashSet = new HashSet<int>(A);
+            var keys = new HashSet<string>();
+            var occurances = new List<(int, int)>();
+
+            foreach (var elem in A)
+            {
+                if (hashSet.Contains(elem) && hashSet.Contains(x - elem))
+                {
+                    string key = elem > (x - elem) ? $"{elem}{x - elem}" : $"{x - elem}{elem}";
+                    if (keys.Add(key))
+                        occurances.Add((elem, x - elem));
+
+                }
+            }
+            occurances.ForEach(tuple => Console.WriteLine($"{tuple.Item1}{tuple.Item2}");
+
+            return occurances;
+        }
+
+
+
+
+
         //2 lower performance O(n^2)
+
         public List<int[]> SolveV3(int[] A, int x)
         {
             //int[] peers = default!;

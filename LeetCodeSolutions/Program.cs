@@ -50,4 +50,4 @@ var christmasTree = new MarryChristimasTree();
 //christmasTree.Solve(30);
 
 var twoSum = new TwoSumProblem();
-twoSum.SolveV2([3, 5, 2, -4, 8, 11], 7);
+twoSum.Solve([3, 5, 2, -4, 8, 11], 7);
