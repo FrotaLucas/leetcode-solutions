@@ -18,7 +18,7 @@ namespace LeetCodeSolutions.Codibility
     {
         public bool Solve(string commands)
         {
-            string[] s = commands.Split(' ');
+            string[] s = commands.Select(c => c.ToString()).ToArray();
             var points = new List<int[]>();
 
             if(s.Length < 4) 
@@ -82,11 +82,11 @@ namespace LeetCodeSolutions.Codibility
 
 
                 //turn up & down 
-                if (dx1 == 0 && dy2 != 0)
+                if (dx1 != 0 && dy2 != 0)
                     turns.Add(point2);
 
                 //turn left & right
-                if (dy1 == 0 && dx2 != 0)
+                if (dy1 != 0 && dx2 != 0)
                     turns.Add(point2);
             }
             
