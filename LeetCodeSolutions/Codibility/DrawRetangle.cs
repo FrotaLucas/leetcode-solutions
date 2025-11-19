@@ -18,7 +18,53 @@ namespace LeetCodeSolutions.Codibility
     {
         public bool Solve(string commands)
         {
+            string[] s = commands.Split(' ');
+            var points = new List<int[]>();
 
+            if(s.Length < 4) 
+                return false;
+
+            //start point
+            int x = 0;
+            int y = 0;  
+            points.Add([x, y]); 
+
+            foreach(var command in s)
+            {
+                switch (command) {
+
+                    case ("u"):
+                        y++;
+                        points.Add([x, y]);
+                        break;
+
+                    case ("d"):
+                        y--;
+                        points.Add([x, y]);
+                        break;
+
+                    case ("r"):
+                        x++;
+                        points.Add([x, y]); 
+                        break;
+
+                    case ("l"):
+                        x--;
+                        points.Add([x, y]);
+                        break;
+
+                }
+            }
+
+            //check final stop
+            var finalPoint = points[points.Count - 1];
+            if (finalPoint[0] != 0 && finalPoint[1] != 0)
+                return false;
+
+
+            //checking turns
+
+            var turns = new List<int[]>();
 
             return true;
         }
