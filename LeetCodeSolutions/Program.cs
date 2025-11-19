@@ -50,4 +50,9 @@ var christmasTree = new MarryChristimasTree();
 //christmasTree.Solve(30);
 
 var twoSum = new TwoSumProblem();
-twoSum.Solve([3, 5, 2, -4, 8, 11], 7);
+//twoSum.Solve([3, 5, 2, -4, 8, 11], 7);
+
+
+var isRetangle = new DrawRetangle();
+var r = isRetangle.Solve("uurrddll");
+Console.WriteLine(r);
