@@ -66,6 +66,45 @@ namespace LeetCodeSolutions.Codibility
 
             var turns = new List<int[]>();
 
+            //add first turn point
+            turns.Add(points[0]);
+            for (int i = 0; i < points.Count -2; i++) 
+            {
+                var point1 = points[i]; 
+                var point2 = points[i + 1];
+                var point3 = points[i + 2]; 
+
+                var dx1 = point2[0] - point1[0];
+                var dx2 = point3[0] - point2[0];
+
+                var dy1 = point2[1] - point1[1];
+                var dy2 = point3[1] - point2[1];
+
+
+                //turn up & down 
+                if (dx1 == 0 && dy2 != 0)
+                    turns.Add(point2);
+
+                //turn left & right
+                if (dy1 == 0 && dx2 != 0)
+                    turns.Add(point2);
+            }
+            
+
+            //checking total vertices
+            if( turns.Count !=4)
+                return false;
+
+            //check height and width
+            int width1 = Math.Abs(turns[1][0] - turns[0][0]);
+            int width2 = Math.Abs(turns[3][0] - turns[2][0]);
+
+            int height1 = Math.Abs(turns[1][1] - turns[0][1]);
+            int height2 = Math.Abs(turns[3][1] - turns[2][1]);
+
+            if (width1 != width2 || height1 != height2)
+                return false;
+
             return true;
         }
     }
