@@ -18,7 +18,6 @@ namespace LeetCodeSolutions.CoderByte
                     longestWord = cleanWord;
             }
 
-            // code goes here  
             return longestWord;
         }
     }
