@@ -65,7 +65,7 @@ namespace LeetCodeSolutions.CoderByte
 
                 }
             }
-            occurances.ForEach(tuple => Console.WriteLine($"{tuple.Item1}{tuple.Item2}");
+            occurances.ForEach(tuple => Console.WriteLine($"{tuple.Item1}{tuple.Item2}"));
 
             return occurances;
         }
