@@ -34,7 +34,7 @@ var small = new FindSmallestTask();
 //small.SolveV2([0,1,2,3]);
 
 var word = new LongestWordTask();
-word.Solve("time## flows here");
+//word.Solve("time## flows here");
 
 var unpaired = new FindUnpairedTask();
 unpaired.Solve([2, 3, 1, 4, 4, 1, 3]);
@@ -57,5 +57,12 @@ var twoSum = new TwoSumProblem();
 
 
 var isRetangle = new DrawRetangle();
+//true
 var r = isRetangle.Solve("uurrddll");
-Console.WriteLine(r);
+//false
+var r2 = isRetangle.Solve("rrrllluudd");
+//true
+var r3 = isRetangle.Solve("rrrluulldd");
+//true
+var r4 = isRetangle.Solve("ddlluurr");
+Console.WriteLine(r4);
