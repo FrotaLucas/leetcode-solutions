@@ -33,6 +33,9 @@ var small = new FindSmallestTask();
 //small.Solve([-1, -2, -3, -3, 0, 1, 2, 3]);
 //small.SolveV2([0,1,2,3]);
 
+var word = new LongestWordTask();
+word.Solve("time## flows here");
+
 var unpaired = new FindUnpairedTask();
 unpaired.Solve([2, 3, 1, 4, 4, 1, 3]);
 unpaired.Solve([2, 3, 1, 4, 2, 5, 4, 1, 3]);
