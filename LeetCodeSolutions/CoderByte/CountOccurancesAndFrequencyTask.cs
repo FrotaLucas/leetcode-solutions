@@ -38,33 +38,41 @@
         {
             int[] arrayInteger = str.Split(';').Select(s => int.Parse(s)).ToArray();
 
-            HashSet<int> occurance = new HashSet<int>();
-
+            HashSet<int> uniques = new HashSet<int>();
+            HashSet<int> duplicates = new HashSet<int>();   
 
             int min = arrayInteger[0];
 
             int max = 0;
             foreach (int num in arrayInteger)
             {
-                if (occurance.Add(num)) 
+                if (uniques.Add(num)) 
                 {
-                    if( num> max)
+                  
+                }
+
+                else if (duplicates.Add(num) )
+                {
+                    if (num > max)
                         max = num;
 
-                    else if( num< min)  
+                    else if (num < min)
                         min = num;
                 }
+
+
+
             }
 
-            string uniques = string.Empty;
+            string result = string.Empty;
 
-            foreach (var unique in occurance)
-                uniques += $"{unique};";
+            foreach (var elem in uniques)
+                result += $"{elem};";
 
-            uniques = uniques + $"{min};{max}";
+            result = result + $"{min};{max}";
 
             //arrayStr.ToList().ForEach( w => Console.Write(w));    
-            return uniques;
+            return result;
         }
     }
 }
