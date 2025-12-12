@@ -16,6 +16,20 @@ namespace LeetCodeSolutions.Codibility
 
     public class DrawRetangle
     {
+        //test
+
+        //true
+        //string commands = "uurrddll";
+
+        //false
+        //string commands = "rrrllluudd";
+
+        //true
+        //string commands = "rrrluulldd";
+
+        //true
+        //string commands = "ddlluurr";
+
         public bool Solve(string commands)
         {
             string[] s = commands.Select(c => c.ToString()).ToArray();
