@@ -17,8 +17,7 @@ var tda2 = new TdaRationalTaskV2();
 
 
 
-var maxCounter = new MaxCounterTask();
-//maxCounter.Solve( 5 ,[3, 4, 4, 6, 1, 4, 4]);
+
 
 
 
