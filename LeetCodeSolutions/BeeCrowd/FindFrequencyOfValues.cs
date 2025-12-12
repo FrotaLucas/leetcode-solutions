@@ -18,11 +18,15 @@ namespace LeetCodeSolutions.BeeCrowd
 
             Console.WriteLine(list);
 
+            //sol 2
+            foreach (var item in list)
+            {
+                if (dictionary.ContainsKey(item))
+                    dictionary[item]++;
+                else
+                    dictionary[item] = 1;
 
-            //foreach (var item in list)
-            //{
-            //    dictionary[item]++;
-            //}
+            }
 
 
             //sol 2
