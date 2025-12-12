@@ -10,7 +10,7 @@ namespace LeetCodeSolutions.BeeCrowd
     //function should find all repeated values and return a dictionary
     public class FindFrequencyOfValues
     {
-        //paramether
+        //tests
         string str = "1355521";
     
 
