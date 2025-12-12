@@ -9,6 +9,10 @@ namespace LeetCodeSolutions.BeeCrowd
 {
     public class FindFrequencyOfValues
     {
+        //paramether
+        string str = "1355521";
+    
+
         public Dictionary<string, int> Solve(string str)
         {
             //similar to HashMap no Java
