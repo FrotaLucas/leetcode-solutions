@@ -11,8 +11,8 @@ namespace LeetCodeSolutions.BeeCrowd
     {
         public Dictionary<string, int> Solve(string str)
         {
-            //similar to HashMap
-            var dictionary = new Dictionary<string, int>();
+            //similar to HashMap no Java
+            var dictionary1 = new Dictionary<string, int>();
 
             var list = str.Select( elem => elem.ToString()).ToList();
 
@@ -21,10 +21,10 @@ namespace LeetCodeSolutions.BeeCrowd
             //sol 2
             foreach (var item in list)
             {
-                if (dictionary.ContainsKey(item))
-                    dictionary[item]++;
+                if (dictionary1.ContainsKey(item))
+                    dictionary1[item]++;
                 else
-                    dictionary[item] = 1;
+                    dictionary1[item] = 1;
 
             }
 
@@ -33,7 +33,7 @@ namespace LeetCodeSolutions.BeeCrowd
             var dictionary2 = new Dictionary<string, int>();
             dictionary2 = str.Select(elem => elem.ToString()).ToList().GroupBy(elem => elem).ToDictionary(group => group.Key, group => group.Count());
 
-            return dictionary;
+            return dictionary1;
         }
     }
 }
