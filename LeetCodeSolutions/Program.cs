@@ -18,10 +18,6 @@ var tda2 = new TdaRationalTaskV2();
 
 
 
-var chocolates = new CountChocolate();
-chocolates.Solve(13, 4);
-
-
 
 
 
