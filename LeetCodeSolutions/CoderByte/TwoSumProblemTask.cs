@@ -19,7 +19,7 @@ namespace LeetCodeSolutions.CoderByte
     /// 
     /// 
     /// </summary>
-    public class TwoSumProblem
+    public class TwoSumProblemTask
     {
 
 
