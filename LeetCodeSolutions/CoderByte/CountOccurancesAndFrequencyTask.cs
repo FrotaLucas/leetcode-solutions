@@ -51,6 +51,7 @@
             
             foreach (int num in arrayInteger)
             {
+                //sol 1
                 if (uniques.Add(num)) 
                 {
                   
@@ -64,6 +65,20 @@
                     if (num < min || min == null)
                         min = num;
                 }
+
+                //sol2 mais enxuta
+
+                //if (!uniques.Add(num)) 
+                //{
+                //    if(duplicates.Add(num))
+                //    {
+                //        if( num > max || max == null)
+                //            max = num;
+                //        if(num < min || min == null)
+                //            min = num;
+
+                //    }
+                //}
 
             }
 
