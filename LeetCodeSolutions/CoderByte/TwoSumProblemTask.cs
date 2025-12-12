@@ -21,6 +21,10 @@ namespace LeetCodeSolutions.CoderByte
     /// </summary>
     public class TwoSumProblemTask
     {
+        //test
+
+        //int[] = [3, 5, 2, -4, 8, 11]; int x = 7;
+
 
 
         //1 better performance O(n)
