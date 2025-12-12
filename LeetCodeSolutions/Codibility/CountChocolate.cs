@@ -42,6 +42,12 @@ namespace LeetCodeSolutions.Codibility
 
     public class CountChocolate
     {
+
+        //tests
+        //int chocolates = 13; int N = 4;
+
+
+
         public int Solve(int chocolates, int N)
         {
 
