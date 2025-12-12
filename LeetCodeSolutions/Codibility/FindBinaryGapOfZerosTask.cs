@@ -8,6 +8,10 @@ namespace LeetCodeSolutions.Codibility
 {
     public class FindBinaryGapOfZerosTask
     {
+        //tests
+        //int number = 9
+        //int number = 1041
+
         public int Solve(int number)
         {
             var arrayOfZeros = ConvertIntegerToBinary(number).Split("1");
