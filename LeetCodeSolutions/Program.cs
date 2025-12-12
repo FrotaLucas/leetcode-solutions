@@ -13,8 +13,4 @@ var tda2 = new TdaRationalTaskV2();
 
 
 
-var occ = new CountOccurancesAndFrequencyTask();
-var frequency = occ.Solve("1;3;2;3;4;1;5;3");
-Console.WriteLine(frequency);
-
 
