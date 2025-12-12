@@ -24,9 +24,6 @@ chocolates.Solve(13, 4);
 
 
 
-var christmasTree = new MarryChristimasTree();
-//christmasTree.Solve(30);
-
 var twoSum = new TwoSumProblem();
 //twoSum.Solve([3, 5, 2, -4, 8, 11], 7);
 
