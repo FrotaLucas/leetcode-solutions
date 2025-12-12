@@ -11,7 +11,7 @@ namespace LeetCodeSolutions.BeeCrowd
     public class FindFrequencyOfValues
     {
         //tests
-        string str = "1355521";
+        //string str = "1355521";
     
 
         public Dictionary<string, int> Solve(string str)
