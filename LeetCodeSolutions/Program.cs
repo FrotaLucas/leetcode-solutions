@@ -18,14 +18,6 @@ var tda2 = new TdaRationalTaskV2();
 
 
 
-
-
-
-var unpaired = new FindUnpairedTask();
-unpaired.Solve([2, 3, 1, 4, 4, 1, 3]);
-unpaired.Solve([2, 3, 1, 4, 2, 5, 4, 1, 3]);
-
-
 var chocolates = new CountChocolate();
 chocolates.Solve(13, 4);
 
