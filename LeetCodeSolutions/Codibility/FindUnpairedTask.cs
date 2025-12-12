@@ -8,6 +8,14 @@ namespace LeetCodeSolutions.Codibility
 {
     public class FindUnpairedTask
     {
+        //tests
+
+        //int[] A = [2, 3, 1, 4, 4, 1, 3];
+        //int [] A = [2, 3, 1, 4, 2, 5, 4, 1, 3];
+
+
+
+
         //list A with non nullable
         public int Solve(int[]A)
         {
