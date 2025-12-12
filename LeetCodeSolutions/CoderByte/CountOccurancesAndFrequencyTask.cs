@@ -65,8 +65,6 @@
                         min = num;
                 }
 
-
-
             }
 
             string result = string.Empty;
@@ -80,5 +78,5 @@
             //arrayStr.ToList().ForEach( w => Console.Write(w));    
             return result;
         }
-    }//2;1;3;1;3;2;4;5
+    }
 }
