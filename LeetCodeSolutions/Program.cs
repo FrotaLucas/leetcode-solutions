@@ -13,9 +13,7 @@ var tda1 = new TdaRationalTaskV1();
 var tda2 = new TdaRationalTaskV2();
 //tda2.Solve();
 
-var binary = new FindBinaryGapOfZerosTask();
-//binary.Solve(9);
-//binary.Solve(1041);
+
 
 
 
