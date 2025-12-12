@@ -34,6 +34,11 @@
 
     public class CountOccurancesAndFrequencyTask
     {
+        //tests
+        //string str = "1;3;2;3;4;1;5;3";
+
+
+
         public string Solve(string str)
         {
             int[] arrayInteger = str.Split(';').Select(s => int.Parse(s)).ToArray();
