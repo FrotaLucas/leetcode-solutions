@@ -1,8 +1,6 @@
-﻿using LeetCodeSolutions.BeeCrowd;
-using LeetCodeSolutions.BeeCrowd.TdaRationalV1;
+﻿using LeetCodeSolutions.BeeCrowd.TdaRationalV1;
 using LeetCodeSolutions.BeeCrowd.TdaRationalV2;
 using LeetCodeSolutions.CoderByte;
-using LeetCodeSolutions.Codibility;
 
 
 
@@ -12,14 +10,6 @@ var tda1 = new TdaRationalTaskV1();
 
 var tda2 = new TdaRationalTaskV2();
 //tda2.Solve();
-
-
-
-
-
-
-
-
 
 
 
