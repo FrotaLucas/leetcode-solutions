@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace LeetCodeSolutions.Codibility
 {
-    public class FindSmallestTask
-    {
         //T3 find the smallest
         // This is a demo task.
 
@@ -31,6 +29,16 @@ namespace LeetCodeSolutions.Codibility
         //NOTES:  should be missisng only 1 single number!!
        
         //int[] A = new int[] { 1, 2, 3, 5, 7, 6 };
+
+
+    public class FindSmallestTask
+    {
+        //tests
+
+        //int[] A = [-1, -2, -3, -3, 0, 1, 2, 3];
+        //int[] A = [0,1,2,3];
+
+
         public int Solve(int[] A)
         {
             //var sortedArray = A.Order();
