@@ -44,11 +44,11 @@
             int[] arrayInteger = str.Split(';').Select(s => int.Parse(s)).ToArray();
 
             HashSet<int> uniques = new HashSet<int>();
-            HashSet<int> duplicates = new HashSet<int>();   
+            HashSet<int> duplicates = new HashSet<int>();
 
-            int min = arrayInteger[0];
-
-            int max = 0;
+            int? min = null;
+            int? max = null;
+            
             foreach (int num in arrayInteger)
             {
                 if (uniques.Add(num)) 
@@ -58,10 +58,10 @@
 
                 else if (duplicates.Add(num) )
                 {
-                    if (num > max)
+                    if (num > max || max == null)
                         max = num;
 
-                    else if (num < min)
+                    if (num < min || min == null)
                         min = num;
                 }
 
