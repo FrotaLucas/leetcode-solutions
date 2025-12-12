@@ -8,6 +8,11 @@ namespace LeetCodeSolutions.Codibility
 {
     public class CheckPermutationTask
     {
+        //tests
+        //permutation.Solve([2, 3, 5, 1]);
+        //permutation.SolveV2([2, 3, 15, 1]);
+        //permutation.SolveV2([2, 1, 15, 1, 3]);
+
         public bool Solve(int[] A)
         {
 
