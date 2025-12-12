@@ -21,6 +21,10 @@ namespace LeetCodeSolutions.Codibility
 
     public class RotateNumbersTask
     {
+        //tests
+        //int [] A = [3, 8, 9, 7, 6]; int k = 3;
+
+
         public int[] Solve(int[]A, int k)
         {
             int n = A.Length;
