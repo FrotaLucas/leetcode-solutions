@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace LeetCodeSolutions.BeeCrowd
 {
+    //function should find all repeated values and return a dictionary
     public class FindFrequencyOfValues
     {
         //paramether
