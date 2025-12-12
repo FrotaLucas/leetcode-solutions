@@ -22,8 +22,6 @@ var chocolates = new CountChocolate();
 chocolates.Solve(13, 4);
 
 
-var rotation = new RotateNumbersTask();
-//rotation.Solve([3, 8, 9, 7, 6], 3);
 
 
 var christmasTree = new MarryChristimasTree();
