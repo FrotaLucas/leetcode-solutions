@@ -21,10 +21,6 @@ var tda2 = new TdaRationalTaskV2();
 
 
 
-var small = new FindSmallestTask();
-//small.Solve([-1, -2, -3, -3, 0, 1, 2, 3]);
-//small.SolveV2([0,1,2,3]);
-
 var word = new LongestWordTask();
 //word.Solve("time## flows here");
 
