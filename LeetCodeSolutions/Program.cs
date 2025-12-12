@@ -22,8 +22,6 @@ var binary = new FindBinaryGapOfZerosTask();
 var maxCounter = new MaxCounterTask();
 //maxCounter.Solve( 5 ,[3, 4, 4, 6, 1, 4, 4]);
 
-var missingInteger = new FindMissingInteger();
-//missingInteger.Solve([2, 4, 5, 1]);
 
 
 var small = new FindSmallestTask();
