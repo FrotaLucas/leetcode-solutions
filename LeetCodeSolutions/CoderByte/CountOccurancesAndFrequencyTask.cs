@@ -24,7 +24,7 @@
     //2;1;3;1;3;2;4;5
     //Explanation:
 
-    //Numbers duplicated: 1, 3 → count = 2
+    //count numbers duplicated: 1, 3 → count = 2
 
     //Lowest duplicate = 1
 
@@ -71,13 +71,14 @@
 
             string result = string.Empty;
 
+            string listInputs = string.Empty;
             foreach (var elem in uniques)
-                result += $"{elem};";
+                listInputs += $"{elem};";
 
-            result = result + $"{min};{max}";
+            result = $"{duplicates.Count};" + $"{min};{max};" + listInputs;
 
             //arrayStr.ToList().ForEach( w => Console.Write(w));    
             return result;
         }
-    }
+    }//2;1;3;1;3;2;4;5
 }
