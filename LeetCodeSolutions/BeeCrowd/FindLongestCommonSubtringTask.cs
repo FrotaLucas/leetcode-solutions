@@ -20,6 +20,10 @@ namespace LeetCodeSolutions.BeeCrowd
     /// 
     public class FindLongestCommonSubtringTask
     {
+        //tests
+        string str1 = "abcdef";
+        string str2 = "cdofhij";
+
         public int Solve(string str1, string str2)
         {
             int tot = 0;
