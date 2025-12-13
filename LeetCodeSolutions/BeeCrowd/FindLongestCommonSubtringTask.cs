@@ -23,6 +23,8 @@ namespace LeetCodeSolutions.BeeCrowd
         //tests
         //string str1 = "abcdef";
         //string str2 = "cdofhij";
+        //string str2 = "Hey This java is hot";
+        //string str1 = "Java is a new paradigm";
 
         public int Solve(string str1, string str2)
         {
