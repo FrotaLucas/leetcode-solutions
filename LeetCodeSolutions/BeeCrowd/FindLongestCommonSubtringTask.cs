@@ -26,12 +26,8 @@ namespace LeetCodeSolutions.BeeCrowd
 
         public int Solve(string str1, string str2)
         {
+
             int tot = 0;
-
-            var c1 = str1[0];
-            var c2 = str1[1];
-            var c3 = str1[2];
-
             //if str1 < str2
             for(int i = 0; i < str1.Length; i++)
             {
