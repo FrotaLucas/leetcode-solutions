@@ -27,7 +27,7 @@ namespace LeetCodeSolutions.BeeCrowd
         public int Solve(string str1, string str2)
         {
 
-            int tot = 0;
+            int result = 0;
             //if str1 < str2
             for(int i = 0; i < str1.Length; i++)
             {
@@ -37,16 +37,21 @@ namespace LeetCodeSolutions.BeeCrowd
                     {
                         int k1 = i;
                         int k2 = j;
-                        while (str1[k1] == str2[k2] && k1 < str1.Length)
+
+                        int count = 0;
+                        while (str1[k1].Equals(str2[k2]))
                         {
-                            tot++;
+                            count++;
                             k1++;
                             k2++;
+
+                            if(k1 == str1.Length)
+                                break;  
                         }
-                        //for( int k = i; k< str1.Length; k++ )
-                        //{
-                        //    if()
-                        //}
+
+                        if(count > result)
+                            result = count;
+                      
                     }
                 }
 
@@ -54,7 +59,7 @@ namespace LeetCodeSolutions.BeeCrowd
 
 
 
-            return tot;
+            return result;
         }
 
     }
