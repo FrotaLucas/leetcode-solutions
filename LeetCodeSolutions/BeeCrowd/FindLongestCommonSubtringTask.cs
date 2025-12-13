@@ -30,7 +30,7 @@ namespace LeetCodeSolutions.BeeCrowd
         {
 
             int result = 0;
-            //if str1 < str2
+
             for(int i = 0; i < str1.Length; i++)
             {
                 for(int j = 0; j < str2.Length; j++)
@@ -53,7 +53,6 @@ namespace LeetCodeSolutions.BeeCrowd
 
                         if(count > result)
                             result = count;
-                      
                     }
                 }
 
