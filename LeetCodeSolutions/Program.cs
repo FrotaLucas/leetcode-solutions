@@ -1,4 +1,5 @@
-﻿using LeetCodeSolutions.BeeCrowd.TdaRationalV1;
+﻿using LeetCodeSolutions.BeeCrowd;
+using LeetCodeSolutions.BeeCrowd.TdaRationalV1;
 using LeetCodeSolutions.BeeCrowd.TdaRationalV2;
 using LeetCodeSolutions.CoderByte;
 
@@ -13,4 +14,7 @@ var tda2 = new TdaRationalTaskV2();
 
 
 
+var obj = new CountOccurancesAndFrequencyTask();
+obj.Solve("1;3;2;3;4;1;5;3");
 
+//3 1 
