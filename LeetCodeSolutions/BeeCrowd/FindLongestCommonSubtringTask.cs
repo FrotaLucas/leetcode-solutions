@@ -47,7 +47,7 @@ namespace LeetCodeSolutions.BeeCrowd
                             k1++;
                             k2++;
 
-                            if(k1 == str1.Length)
+                            if(k1 == str1.Length || k2 == str2.Length)
                                 break;  
                         }
 
