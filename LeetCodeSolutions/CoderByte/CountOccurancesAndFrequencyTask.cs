@@ -61,7 +61,7 @@
                 {
                     if (num > max || max == null)
                         max = num;
-
+`
                     if (num < min || min == null)
                         min = num;
                 }
