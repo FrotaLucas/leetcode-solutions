@@ -23,7 +23,35 @@ namespace LeetCodeSolutions.BeeCrowd
         public int Solve(string str1, string str2)
         {
             int tot = 0;
-            return 0;
+
+
+            //if str1 < str2
+            for(int i = 0; i < str1.Length; i++)
+            {
+                for(int j = 0; j < str2.Length; j++)
+                {
+                    if(str1[i] == str2[j])
+                    {
+                        int k1 = i;
+                        int k2 = j;
+                        while (str1[k1] == str2[k2])
+                        {
+                            tot++;
+                            k1++;
+                            k2++;
+                        }
+                        //for( int k = i; k< str1.Length; k++ )
+                        //{
+                        //    if()
+                        //}
+                    }
+                }
+
+            }
+
+
+
+            return tot;
         }
 
     }
