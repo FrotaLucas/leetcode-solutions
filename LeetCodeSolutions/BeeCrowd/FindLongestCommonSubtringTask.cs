@@ -28,6 +28,9 @@ namespace LeetCodeSolutions.BeeCrowd
         {
             int tot = 0;
 
+            var c1 = str1[0];
+            var c2 = str1[1];
+            var c3 = str1[2];
 
             //if str1 < str2
             for(int i = 0; i < str1.Length; i++)
@@ -38,7 +41,7 @@ namespace LeetCodeSolutions.BeeCrowd
                     {
                         int k1 = i;
                         int k2 = j;
-                        while (str1[k1] == str2[k2])
+                        while (str1[k1] == str2[k2] && k1 < str1.Length)
                         {
                             tot++;
                             k1++;
