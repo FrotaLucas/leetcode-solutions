@@ -40,7 +40,7 @@ namespace LeetCodeSolutions.Codibility
 
 //    N is an integer within the range[0..100, 000];
 //    each element of array A is an integer within the range[−2, 147, 483, 648..2, 147, 483, 647].
-    public class DominationTask
+    public class DominatorTask
     {
         //solution O(n * log n)
         public int Solve(int[] A)
