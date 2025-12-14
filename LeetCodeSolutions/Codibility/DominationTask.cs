@@ -52,6 +52,15 @@ namespace LeetCodeSolutions.Codibility
             return dominator;
         }
 
-    
+
+        //solution O(n^ 2)
+        public int Solve2(int[] A)
+        {
+            int dominator = 0;
+
+
+
+            return dominator;
+        }
     }
 }
