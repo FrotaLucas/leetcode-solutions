@@ -42,12 +42,49 @@ namespace LeetCodeSolutions.Codibility
 //    each element of array A is an integer within the range[−2, 147, 483, 648..2, 147, 483, 647].
     public class DominatorTask
     {
+        //tests
+        int[] A = [3, 4, 3, 2, 3, -1, 3, 3];
+
+
         //solution O(n * log n)
         public int Solve(int[] A)
         {
-            int dominator = 0;
+            int dominator = -1;
 
+            //log n
+            Array.Sort(A);
 
+            //index 1 slice
+            int index = A.Length / 2;
+
+            int i = 0;
+            int count = 0;
+            int num = A[0];
+
+            while (i < A.Length)
+            {
+
+                if(num != A[i])
+                {
+                    if(count > dominator)
+                    {
+                        dominator = count;
+                        count = 0;
+                    }
+                }
+
+                if(A[i] == A[i+1])
+                {
+                    num = A[i]; 
+                    count = count + 2;
+                    i++;
+                }
+
+                i++;
+            }
+            
+            if(count == 0)
+                return -1;
 
             return dominator;
         }
