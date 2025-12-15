@@ -74,17 +74,19 @@ namespace LeetCodeSolutions.Codibility
                     }
                 }
 
-                if(i< A.Length -1 && A[i] == A[i+1])
+                if(i < A.Length -1 && A[i] == A[i+1])
                 {
                     num = A[i]; 
                     count = count + 2;
                     i++;
+
                 }
 
+               
                 i++;
             }
             
-            if(count == 0)
+            if(count == 0 && dominator == 0)
                 return -1;
 
             return dominator;
