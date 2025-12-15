@@ -46,7 +46,7 @@ namespace LeetCodeSolutions.Codibility
         int[] A = [3, 4, 3, 2, 3, -1, 3, 3];
         int[] B = [3, 3, 3, 2, 2];
         int[] C = [2, 2, 3, 3, 3];
-
+        int[] D = [2, 2, 1, 3, 3]; //false because 3 does not occur more oft than the marjorit
         //solution O(n * log n)
         public int Solve(int[] A)
         {
