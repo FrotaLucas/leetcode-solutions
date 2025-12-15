@@ -74,7 +74,7 @@ namespace LeetCodeSolutions.Codibility
                     }
                 }
 
-                if(A[i] == A[i+1])
+                if(i< A.Length -1 && A[i] == A[i+1])
                 {
                     num = A[i]; 
                     count = count + 2;
