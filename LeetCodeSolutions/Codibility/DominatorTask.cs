@@ -46,7 +46,7 @@
         //solution O(n * log n)
         public int Solve(int[] A)
         {
-            int dominator = -1;
+            int result = -1;
 
             //log n
             Array.Sort(A);
@@ -54,16 +54,22 @@
 
             int i = 0;
             int count = 0;
+            int countDominator = 0;
             int minDominator = (A.Length + 1)/ 2;
+            int num = -1;
 
+            //n
             while (i < A.Length)
             {
                 if(i == A.Length -1 && count > 0)
                 {
                     count++;
 
-                    if(count > dominator) 
-                        dominator = count;
+                    if(count > countDominator)
+                    {
+                        countDominator = count;
+                        num = A[i];
+                    }
 
                     count = 0;
                 }
@@ -72,8 +78,11 @@
                 {
                     count++;
 
-                    if(count > dominator)
-                        dominator = count;  
+                    if(count > countDominator)
+                    {
+                        countDominator = count;
+                        num = A[i];
+                    }
 
                     count = 0;  
                 }
@@ -87,12 +96,11 @@
                
                 i++;
             }
-            
 
-            if(dominator > minDominator)
-                return dominator;
+            if (countDominator >= minDominator)
+                result = num;
 
-            return dominator;
+            return result;
         }
 
 
