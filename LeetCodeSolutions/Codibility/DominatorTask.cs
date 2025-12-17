@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Xml.Linq;
-
-namespace LeetCodeSolutions.Codibility
+﻿namespace LeetCodeSolutions.Codibility
 {
 
 //    An array A consisting of N integers is given.The dominator of array A is the value that occurs in more than half of the elements of A.
@@ -63,8 +53,8 @@ namespace LeetCodeSolutions.Codibility
 
 
             int i = 0;
-            int count = 0;  
-
+            int count = 0;
+            int minDominator = (A.Length + 1)/ 2;
 
             while (i < A.Length)
             {
@@ -98,6 +88,9 @@ namespace LeetCodeSolutions.Codibility
                 i++;
             }
             
+
+            if(dominator > minDominator)
+                return dominator;
 
             return dominator;
         }
