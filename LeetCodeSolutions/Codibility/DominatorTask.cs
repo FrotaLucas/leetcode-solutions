@@ -47,6 +47,9 @@ namespace LeetCodeSolutions.Codibility
         int[] B = [3, 3, 3, 2, 2];
         int[] C = [2, 2, 3, 3, 3];
         int[] D = [2, 2, 1, 3, 3]; //false because 3 does not occur more oft than the marjorit
+        int[] E = [1, 2, 3, 4, 5]; 
+
+
         //solution O(n * log n)
         public int Solve(int[] A)
         {
@@ -55,39 +58,43 @@ namespace LeetCodeSolutions.Codibility
             //log n
             Array.Sort(A);
 
-            //index 1 slice
-            int index = A.Length / 2;
 
             int i = 0;
-            int count = 0;
-            int num = A[0];
+            int count = 0;  
+
 
             while (i < A.Length)
             {
-
-                if(num != A[i])
+                if(i == A.Length -1 && count > 0)
                 {
-                    if(count > dominator)
-                    {
+                    count++;
+
+                    if(count > dominator) 
                         dominator = count;
-                        count = 0;
-                    }
+
+                    count = 0;
                 }
 
-                if(i < A.Length -1 && A[i] == A[i+1])
+                if (i < A.Length - 1 && count > 0 && A[i] != A[i + 1])
                 {
-                    num = A[i]; 
-                    count = count + 2;
-                    i++;
+                    count++;
 
+                    if(count > dominator)
+                        dominator = count;  
+
+                    count = 0;  
+                }
+
+
+                if (i < A.Length -1 && A[i] == A[i+1])
+                {
+                    count++;    
                 }
 
                
                 i++;
             }
             
-            if(count == 0 && dominator == 0)
-                return -1;
 
             return dominator;
         }
