@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Codibility\Theory-PDFs\" />
     <Folder Include="LeetCode\" />
   </ItemGroup>
 
