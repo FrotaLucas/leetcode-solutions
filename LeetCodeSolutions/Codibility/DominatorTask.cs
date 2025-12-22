@@ -61,11 +61,11 @@
             //n
             while (i < A.Length)
             {
-                if(i == A.Length -1 && count > 0)
+                if (i == A.Length - 1 && count > 0)
                 {
                     count++;
 
-                    if(count > countDominator)
+                    if (count > countDominator)
                     {
                         countDominator = count;
                         num = A[i];
@@ -78,22 +78,22 @@
                 {
                     count++;
 
-                    if(count > countDominator)
+                    if (count > countDominator)
                     {
                         countDominator = count;
                         num = A[i];
                     }
 
-                    count = 0;  
+                    count = 0;
                 }
 
 
-                if (i < A.Length -1 && A[i] == A[i+1])
+                if (i < A.Length - 1 && A[i] == A[i + 1])
                 {
-                    count++;    
+                    count++;
                 }
 
-               
+
                 i++;
             }
 
@@ -104,8 +104,60 @@
         }
 
 
-        //solution O(n^ 2)
+        //solution O(n * log n) chatGPT
         public int Solve2(int[] A)
+        {
+            if (A.Length == 0)
+                return -1; // ou lance exceção, se preferir
+
+            // O(n log n)
+            Array.Sort(A);
+
+            int i = 1;
+            int currentCount = 1;
+            int maxCount = 1;
+            int result = A[0];
+
+            // O(n)
+            while (i < A.Length)
+            {
+                if (A[i] == A[i - 1])
+                {
+                    currentCount++;
+                }
+                else
+                {
+                    currentCount = 1;
+                }
+
+                if (currentCount > maxCount)
+                {
+                    maxCount = currentCount;
+                    result = A[i];
+                }
+
+                i++;
+            }
+
+            return result;
+        }
+
+
+
+        //solution O(n^ 2)
+        public int Solve3(int[] A)
+        {
+            int dominator = 0;
+
+
+
+            return dominator;
+        }
+
+
+
+        //solution O (n)
+        public int Solve4(int[] A)
         {
             int dominator = 0;
 
