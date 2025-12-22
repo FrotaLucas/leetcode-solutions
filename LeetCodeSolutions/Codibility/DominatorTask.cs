@@ -165,6 +165,7 @@
                 if(count > countDominator)
                 {
                     countDominator = count;
+                    count = 0;
                     dominator = A[i];
                 }
 
