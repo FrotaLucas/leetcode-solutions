@@ -104,7 +104,7 @@
         }
 
 
-        //solution O(n * log n) chatGPT
+        //solution O(n * log n) Version chatGPT
         public int Solve2(int[] A)
         {
             if (A.Length == 0)
@@ -143,7 +143,6 @@
         }
 
 
-
         //solution O(n^ 2)
         public int Solve3(int[] A)
         {
@@ -180,13 +179,50 @@
 
 
         //solution O (n)
+        /// <summary>
+        /// 
+        /// Algoritmo de Boyer–Moore (Majority Vote Algorithm)
+        /// Se um elemento aparece mais de n/2 vezes, ele não pode ser completamente eliminado ao remover pares de elementos diferentes.
+        /// </summary>
+        public int FindCandidate(int[] A)
+        {
+            int candidate = 0;
+            int count = 0;
+
+            foreach(var num in A)
+            {
+                if( count == 0)
+                {
+                    candidate = num;
+                    count = 1;
+                }
+                else if( candidate == num)
+                {
+                    count++;
+                }
+                else
+                    count--;
+            }
+
+            return candidate;
+        }
+
         public int Solve4(int[] A)
         {
-            int dominator = 0;
+            int occurancies = 0;
+            int candidate = FindCandidate(A);
+
+            foreach (var num in A)
+            {
+                if(num == candidate)
+                    occurancies++;
+            }
 
 
+            if (occurancies > (A.Length + 1) / 2)
+                return candidate;
 
-            return dominator;
+            return -1;
         }
     }
 }
