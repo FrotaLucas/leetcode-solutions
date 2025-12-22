@@ -179,6 +179,7 @@
 
 
         //solution O (n)
+
         /// <summary>
         /// 
         /// Algoritmo de Boyer–Moore (Majority Vote Algorithm)
