@@ -147,11 +147,33 @@
         //solution O(n^ 2)
         public int Solve3(int[] A)
         {
+            int result = -1;
+            int minDominator = (A.Length + 1) / 2;
             int dominator = 0;
+            int countDominator = 0;
+            int count = 0;
 
+            for(int i=0; i < A.Length; i++)
+            {
 
+                for(int j=0; j < A.Length; j++)
+                {
+                    if (A[i] == A[j])
+                        count++;
+                }
 
-            return dominator;
+                if(count > countDominator)
+                {
+                    countDominator = count;
+                    dominator = A[i];
+                }
+
+            }
+
+            if (countDominator > minDominator)
+                result = dominator;
+
+            return result;
         }
 
 
