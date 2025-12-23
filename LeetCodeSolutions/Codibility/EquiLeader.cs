@@ -110,7 +110,10 @@ namespace LeetCodeSolutions.Codibility
 
                 var slice1 = (index + 2)/ 2;
                 if(countLeader1 < slice1)
+                {
+                    index++;
                     continue;
+                }
 
                 for(int j = index +1; j < n-1; j++)
                 {
