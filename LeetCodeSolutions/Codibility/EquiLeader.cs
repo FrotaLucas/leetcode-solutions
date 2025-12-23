@@ -71,7 +71,7 @@ namespace LeetCodeSolutions.Codibility
         {
             int totLeaders = 0;
             int index = 1;
-            int n = (A.Length +1)/ 2;
+            int n = A.Length;
             int[] sortedArray = A.OrderBy( x => x).ToArray();   
 
             if (n <= 3)
