@@ -122,6 +122,7 @@ namespace LeetCodeSolutions.Codibility
 
                     else if (sortedArray[j] !=sortedArray[j+1] && count2 !=0 )
                         count2++;
+
                     else
                     {
                         if(count2 > countLeader2)
