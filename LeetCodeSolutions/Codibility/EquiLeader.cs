@@ -89,7 +89,7 @@ namespace LeetCodeSolutions.Codibility
 
             while ( index < n-2 )
             {
-                for(int i = 0; i <= index; i++)
+                for(int i = 0; i < index -1; i++)
                 {
                     if (sortedArray[i] == sortedArray[i+1])
                         count1++;
