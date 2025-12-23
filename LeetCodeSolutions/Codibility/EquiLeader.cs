@@ -72,14 +72,13 @@ namespace LeetCodeSolutions.Codibility
             int totLeaders = 0;
             int index = 1;
             int n = A.Length;
-            int[] sortedArray = A.OrderBy( x => x).ToArray();   
 
             if (n <= 3)
                 return -1;
 
 
-            int leader1 = sortedArray[0];
-            int leader2 = sortedArray[1];
+            int leader1 = A[0];
+            int leader2 = A[1];
 
             int countLeader1 = 0;
             int countLeader2 = 0;
@@ -89,6 +88,8 @@ namespace LeetCodeSolutions.Codibility
 
             while ( index < n-2 )
             {
+                var sortedArray = A.Take(index +1).OrderBy( x => x).ToArray();  
+
                 for(int i = 0; i < index -1; i++)
                 {
                     if (sortedArray[i] == sortedArray[i+1])
