@@ -88,12 +88,12 @@ namespace LeetCodeSolutions.Codibility
 
             while ( index < n-2 )
             {
-                var sortedArray = A.Take(index +1).OrderBy( x => x).ToArray();  
+                var sliceArray1 = A.Take(index +1).OrderBy( x => x).ToArray();  
 
                 for(int i = 0; i < index; i++)
                 {
 
-                    if (sortedArray[i] == sortedArray[i+1])
+                    if (sliceArray1[i] == sliceArray1[i+1])
                     {
                         count1++;
 
@@ -106,7 +106,7 @@ namespace LeetCodeSolutions.Codibility
                         }
                     }
 
-                    else if (sortedArray[i] != sortedArray[i+1] && count1 !=0 )
+                    else if (sliceArray1[i] != sliceArray1[i+1] && count1 !=0 )
                     {
                         count1++;
                         countLeader1 = count1;
@@ -117,7 +117,7 @@ namespace LeetCodeSolutions.Codibility
                     {
                         if(count1 > countLeader1)
                         {
-                            leader1 = sortedArray[i];
+                            leader1 = sliceArray1[i];
                             countLeader1 = count1;
                             count1 = 0;
                         }
@@ -134,7 +134,9 @@ namespace LeetCodeSolutions.Codibility
 
                 for(int j = index; j < n; j++)
                 {
-                    if (sortedArray[j] == sortedArray[j + 1])
+                    var sliceArry2 = A.Skip(index +1).OrderBy(x => x).ToArray();
+
+                    if (sliceArry2[j] == sliceArry2[j + 1])
                     {
                         count2++;
 
@@ -146,7 +148,7 @@ namespace LeetCodeSolutions.Codibility
                         }
                     }
 
-                    else if (sortedArray[j] !=sortedArray[j+1] && count2 !=0 )
+                    else if (sliceArry2[j] !=sliceArry2[j+1] && count2 !=0 )
                     {
                         count2++;
                         countLeader2 = count2;
@@ -157,7 +159,7 @@ namespace LeetCodeSolutions.Codibility
                     {
                         if(count2 > countLeader2)
                         {
-                            leader2 = sortedArray[j];
+                            leader2 = sliceArry2[j];
                             countLeader2 = count2;
                             count2 = 0;
                         }
