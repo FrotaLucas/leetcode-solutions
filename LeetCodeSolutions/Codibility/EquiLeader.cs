@@ -92,8 +92,19 @@ namespace LeetCodeSolutions.Codibility
 
                 for(int i = 0; i < index; i++)
                 {
+
                     if (sortedArray[i] == sortedArray[i+1])
+                    {
                         count1++;
+
+                        if( i == index-1)
+                        {
+                            count1++;
+
+                            if (count1 > countLeader1)
+                                countLeader1 = count1;
+                        }
+                    }
 
                     else if (sortedArray[i] != sortedArray[i+1] && count1 !=0 )
                     {
@@ -124,7 +135,16 @@ namespace LeetCodeSolutions.Codibility
                 for(int j = index; j < n; j++)
                 {
                     if (sortedArray[j] == sortedArray[j + 1])
+                    {
                         count2++;
+
+                        if( j == index-1)
+                        {
+                            count2++;
+                            if(count2 > countLeader2)
+                                countLeader2 = count2;
+                        }
+                    }
 
                     else if (sortedArray[j] !=sortedArray[j+1] && count2 !=0 )
                     {
