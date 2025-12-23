@@ -68,8 +68,8 @@ namespace LeetCodeSolutions.Codibility
     {
         public int Solve(int[] A)
         {
-            int leader = -1;
-            int slice = 1;
+            int totLeaders = 0;
+            int index = 1;
             int n = (A.Length +1)/ 2;
             int[] sortedArray = A.OrderBy( x => x).ToArray();   
 
@@ -86,9 +86,9 @@ namespace LeetCodeSolutions.Codibility
             int count1 = 0;
             int count2 = 0;
 
-            while ( slice < n-2 )
+            while ( index < n-2 )
             {
-                for(int i = 0; i <= slice; i++)
+                for(int i = 0; i <= index; i++)
                 {
                     if (sortedArray[i] == sortedArray[i+1])
                         count1++;
@@ -105,19 +105,44 @@ namespace LeetCodeSolutions.Codibility
                             count1 = 0;
                         }
                     }
-
-
                 }
 
-                for(int j = slice +1; j < n; j++)
+                var slice1 = (index + 2)/ 2;
+                if(countLeader1 < slice1)
+                    continue;
+
+                for(int j = index +1; j < n-1; j++)
                 {
-                   
+                    if (sortedArray[j] == sortedArray[j + 1])
+                        count2++;
+
+                    else if (sortedArray[j] !=sortedArray[j+1] && count2 !=0 )
+                        count2++;
+                    else
+                    {
+                        if(count2 > countLeader2)
+                        {
+                            leader2 = sortedArray[j];
+                            countLeader2 = count2;
+                            count2 = 0;
+                        }
+                    }
                 }
 
-                slice++;
+                var slice2 = (n - index + 2)/2;
+                if(countLeader2 < slice2)
+                    continue;
+
+                if(leader1 == leader2)
+                    totLeaders++;
+
+                index++;
             }
 
-            return leader;
+            if (totLeaders == 0)
+                return -1;
+
+            return totLeaders;
         }
     }
 }
