@@ -43,7 +43,6 @@ namespace LeetCodeSolutions.Codibility
 
 //    For example, given:
 
-
 //        A[0] = 4
     
 //        A[1] = 3
@@ -52,7 +51,6 @@ namespace LeetCodeSolutions.Codibility
     
 //        A[3] = 4
 
-
 //        A[4] = 4
     
 //        A[5] = 2
@@ -60,10 +58,10 @@ namespace LeetCodeSolutions.Codibility
 
 
 //    Write an efficient algorithm for the following assumptions:
-
-
 //    N is an integer within the range[1..100, 000];
 //    each element of array A is an integer within the range[−1, 000, 000, 000..1, 000, 000, 000].
+
+
     public class EquiLeader
     {
         public int Solve(int[] A)
