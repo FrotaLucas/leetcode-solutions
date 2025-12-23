@@ -96,7 +96,11 @@ namespace LeetCodeSolutions.Codibility
                         count1++;
 
                     else if (sortedArray[i] != sortedArray[i+1] && count1 !=0 )
+                    {
                         count1++;
+                        countLeader1 = count1;
+                        count1 = 0;
+                    }
 
                     else
                     {
@@ -123,7 +127,11 @@ namespace LeetCodeSolutions.Codibility
                         count2++;
 
                     else if (sortedArray[j] !=sortedArray[j+1] && count2 !=0 )
+                    {
                         count2++;
+                        countLeader2 = count2;
+                        count2 = 0;
+                    }
 
                     else
                     {
