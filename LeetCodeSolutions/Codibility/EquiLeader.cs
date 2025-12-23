@@ -135,7 +135,10 @@ namespace LeetCodeSolutions.Codibility
 
                 var slice2 = (n - index + 2)/2;
                 if(countLeader2 < slice2)
+                {
+                    index++;
                     continue;
+                }
 
                 if(leader1 == leader2)
                     totLeaders++;
