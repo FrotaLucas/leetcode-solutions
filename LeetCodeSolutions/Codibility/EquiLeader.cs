@@ -90,7 +90,7 @@ namespace LeetCodeSolutions.Codibility
             {
                 var sortedArray = A.Take(index +1).OrderBy( x => x).ToArray();  
 
-                for(int i = 0; i < index -1; i++)
+                for(int i = 0; i < index; i++)
                 {
                     if (sortedArray[i] == sortedArray[i+1])
                         count1++;
@@ -117,7 +117,7 @@ namespace LeetCodeSolutions.Codibility
                     continue;
                 }
 
-                for(int j = index +1; j < n-1; j++)
+                for(int j = index; j < n; j++)
                 {
                     if (sortedArray[j] == sortedArray[j + 1])
                         count2++;
