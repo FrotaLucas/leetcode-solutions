@@ -71,13 +71,48 @@ namespace LeetCodeSolutions.Codibility
             int leader = -1;
             int slice = 1;
             int n = (A.Length +1)/ 2;
+            int[] sortedArray = A.OrderBy( x => x).ToArray();   
 
             if (n <= 3)
                 return -1;
 
+
+            int leader1 = sortedArray[0];
+            int leader2 = sortedArray[1];
+
+            int countLeader1 = 0;
+            int countLeader2 = 0;
+
+            int count1 = 0;
+            int count2 = 0;
+
             while ( slice < n-2 )
             {
+                for(int i = 0; i <= slice; i++)
+                {
+                    if (sortedArray[i] == sortedArray[i+1])
+                        count1++;
 
+                    else if (sortedArray[i] != sortedArray[i+1] && count1 !=0 )
+                        count1++;
+
+                    else
+                    {
+                        if(count1 > countLeader1)
+                        {
+                            leader1 = sortedArray[i];
+                            countLeader1 = count1;
+                            count1 = 0;
+                        }
+                    }
+
+
+                }
+
+                for(int j = slice +1; j < n; j++)
+                {
+                   
+                }
 
                 slice++;
             }
