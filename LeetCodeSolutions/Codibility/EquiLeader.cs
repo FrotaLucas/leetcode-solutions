@@ -107,6 +107,7 @@ namespace LeetCodeSolutions.Codibility
                         }
                     }
                 }
+                count1 = 0;
 
                 var slice1 = (index + 2)/ 2;
                 if(countLeader1 < slice1)
@@ -133,6 +134,7 @@ namespace LeetCodeSolutions.Codibility
                         }
                     }
                 }
+                count2 = 0;
 
                 var slice2 = (n - index + 2)/2;
                 if(countLeader2 < slice2)
