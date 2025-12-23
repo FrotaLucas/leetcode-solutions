@@ -69,6 +69,17 @@ namespace LeetCodeSolutions.Codibility
         public int Solve(int[] A)
         {
             int leader = -1;
+            int slice = 2;
+            int n = (A.Length +1)/ 2;
+
+            if (n <= 4)
+                return -1;
+
+            while ( slice < n -1 )
+            {
+
+            }
+
             return leader;
         }
     }
