@@ -64,6 +64,9 @@ namespace LeetCodeSolutions.Codibility
 
     public class EquiLeader
     {
+        //tests
+        int[] A = [4, 3, 4, 4, 4, 2];
+
         public int Solve(int[] A)
         {
             int totLeaders = 0;
