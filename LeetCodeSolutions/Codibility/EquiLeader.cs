@@ -131,25 +131,25 @@ namespace LeetCodeSolutions.Codibility
 
             int leader = slice[0];
 
-            for (int j = 0; j < length; j++)
+            for (int i = 0; i < length; i++)
             {
 
-                if (slice[j] == slice[j + 1])
+                if (slice[i] == slice[i + 1])
                 {
                     count++;
 
-                    if (j == length - 1)
+                    if (i == length - 1)
                     {
                         count++;
                         if (count > countLeader)
                         {
                             countLeader = count;
-                            leader = slice[j];
+                            leader = slice[i];
                         }
                     }
                 }
 
-                else if (slice[j] != slice[j + 1] && count != 0)
+                else if (slice[i] != slice[i + 1] && count != 0)
                 {
                     count++;
                     countLeader = count;
@@ -160,7 +160,7 @@ namespace LeetCodeSolutions.Codibility
                 {
                     if (count > countLeader)
                     {
-                        leader = slice[j];
+                        leader = slice[i];
                         countLeader = count;
                         count = 0;
                     }
