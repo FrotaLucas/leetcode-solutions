@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics.Metrics;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -191,6 +193,58 @@ namespace LeetCodeSolutions.Codibility
                 return -1;
 
             return totLeaders;
+        }
+
+        private int FindLeader(int[] slice, int length)
+        {
+            int count = 0;
+            int countLeader = 0;
+            int leader = 0;
+
+            for (int j = 0; j < length; j++)
+            {
+
+                if (slice[j] == slice[j + 1])
+                {
+                    count++;
+
+                    if (j == length - 1)
+                    {
+                        count++;
+                        if (count > countLeader)
+                        {
+                            countLeader = count;
+                            leader = slice[j];
+                        }
+                    }
+                }
+
+                else if (slice[j] != slice[j + 1] && count != 0)
+                {
+                    count++;
+                    countLeader = count;
+                    count = 0;
+                }
+
+                else
+                {
+                    if (count > countLeader)
+                    {
+                        leader = slice[j];
+                        countLeader = count;
+                        count = 0;
+                    }
+                }
+            }
+
+            int n = (slice.Length +1)/ 2;
+
+            if(countLeader < n)
+                return -1;
+
+            return leader;  
+
+
         }
     }
 }
