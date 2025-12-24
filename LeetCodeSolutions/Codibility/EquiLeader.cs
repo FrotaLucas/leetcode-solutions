@@ -66,7 +66,7 @@ namespace LeetCodeSolutions.Codibility
     public class EquiLeader
     {
         //tests
-        int[] A = [4, 3, 4, 4, 4, 2];
+        int[] A = [4, 3, 4, 4, 4, 2]; 
 
         public int Solve(int[] A)
         {
@@ -74,8 +74,7 @@ namespace LeetCodeSolutions.Codibility
             int index = 0;
             int n = A.Length;
 
-            //esta erradooooooooooooooooooooooo isso aqui
-            if (n <= 3)
+            if (n <= 1)
                 return -1;
 
 
@@ -83,11 +82,11 @@ namespace LeetCodeSolutions.Codibility
 
             int leader2 = A[1];
 
-            while ( index < n-2 )
+            while ( index < n-1 )
             {
                 var sliceArray1 = A.Take(index +1).OrderBy( x => x).ToArray();  
 
-                leader1 = FindLeader(sliceArray1, index);
+                leader1 = FindLeader(sliceArray1);
                 if(leader1 == -1)
                 {
                     index++;
@@ -96,7 +95,7 @@ namespace LeetCodeSolutions.Codibility
              
                 var sliceArray2 = A.Skip(index +1).OrderBy(x => x).ToArray();
                 
-                leader2 = FindLeader(sliceArray2, n -  index -2);
+                leader2 = FindLeader(sliceArray2);
                 if (leader2 == -1)
                 {
                     index++;
@@ -115,7 +114,7 @@ namespace LeetCodeSolutions.Codibility
             return totLeaders;
         }
 
-        private int FindLeader(int[] slice, int length)
+        private int FindLeader(int[] slice)
         {
             int count = 0;
             int countLeader = 0;
@@ -131,14 +130,15 @@ namespace LeetCodeSolutions.Codibility
 
             int leader = slice[0];
 
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < slice.Length -1; i++)
             {
 
                 if (slice[i] == slice[i + 1])
                 {
                     count++;
 
-                    if (i == length - 1)
+                    //last i
+                    if (i == slice.Length - 2)
                     {
                         count++;
                         if (count > countLeader)
@@ -152,7 +152,8 @@ namespace LeetCodeSolutions.Codibility
                 else if (slice[i] != slice[i + 1] && count != 0)
                 {
                     count++;
-                    countLeader = count;
+                    if(countLeader > count)
+                        countLeader = count;
                     count = 0;
                 }
 
