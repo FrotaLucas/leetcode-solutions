@@ -132,7 +132,7 @@ namespace LeetCodeSolutions.Codibility
                     continue;
                 }
 
-                for(int j = index; j < n; j++)
+                for(int j = 0; j < n - index - 2; j++)
                 {
                     var sliceArry2 = A.Skip(index +1).OrderBy(x => x).ToArray();
 
@@ -148,7 +148,7 @@ namespace LeetCodeSolutions.Codibility
                         }
                     }
 
-                    else if (sliceArry2[j] !=sliceArry2[j+1] && count2 !=0 )
+                    else if (sliceArry2[j] != sliceArry2[j+1] && count2 !=0 )
                     {
                         count2++;
                         countLeader2 = count2;
