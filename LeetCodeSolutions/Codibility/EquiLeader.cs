@@ -82,12 +82,6 @@ namespace LeetCodeSolutions.Codibility
             int leader1 = A[0];
             int leader2 = A[1];
 
-            int countLeader1 = 0;
-            int countLeader2 = 0;
-
-            int count1 = 0;
-            int count2 = 0;
-
             while ( index < n-2 )
             {
                 var sliceArray1 = A.Take(index +1).OrderBy( x => x).ToArray();  
@@ -124,11 +118,12 @@ namespace LeetCodeSolutions.Codibility
         {
             int count = 0;
             int countLeader = 0;
-            int leader = 0;
 
             if (slice.Length == 1)
                 return slice[0];
                 
+            int leader = slice[0];
+
             for (int j = 0; j < length; j++)
             {
 
