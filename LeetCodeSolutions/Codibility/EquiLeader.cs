@@ -135,9 +135,10 @@ namespace LeetCodeSolutions.Codibility
                     continue;
                 }
 
+                var sliceArray2 = A.Skip(index +1).OrderBy(x => x).ToArray();
+                
                 for(int j = 0; j < n - index - 2; j++)
                 {
-                    var sliceArray2 = A.Skip(index +1).OrderBy(x => x).ToArray();
 
                     if (sliceArray2[j] == sliceArray2[j + 1])
                     {
