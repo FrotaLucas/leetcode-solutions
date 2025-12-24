@@ -72,7 +72,7 @@ namespace LeetCodeSolutions.Codibility
         public int Solve(int[] A)
         {
             int totLeaders = 0;
-            int index = 1;
+            int index = 0;
             int n = A.Length;
 
             if (n <= 3)
@@ -92,98 +92,23 @@ namespace LeetCodeSolutions.Codibility
             {
                 var sliceArray1 = A.Take(index +1).OrderBy( x => x).ToArray();  
 
-                for(int i = 0; i < index; i++)
-                {
-
-                    if (sliceArray1[i] == sliceArray1[i+1])
-                    {
-                        count1++;
-
-                        if( i == index-1)
-                        {
-                            count1++;
-
-                            if (count1 > countLeader1)
-                            {
-                                countLeader1 = count1;
-                                leader2 = sliceArray1[i];
-                            }
-                        }
-                    }
-
-                    else if (sliceArray1[i] != sliceArray1[i+1] && count1 !=0 )
-                    {
-                        count1++;
-                        countLeader1 = count1;
-                        count1 = 0;
-                    }
-
-                    else
-                    {
-                        if(count1 > countLeader1)
-                        {
-                            leader1 = sliceArray1[i];
-                            countLeader1 = count1;
-                            count1 = 0;
-                        }
-                    }
-                }
-                count1 = 0;
-
-                var slice1 = (index + 2)/ 2;
-                if(countLeader1 < slice1)
+                leader1 = FindLeader(sliceArray1, index);
+                if(leader1 == -1)
                 {
                     index++;
                     continue;
                 }
-
+             
                 var sliceArray2 = A.Skip(index +1).OrderBy(x => x).ToArray();
                 
-                for(int j = 0; j < n - index - 2; j++)
-                {
-
-                    if (sliceArray2[j] == sliceArray2[j + 1])
-                    {
-                        count2++;
-
-                        if( j == index-1)
-                        {
-                            count2++;
-                            if(count2 > countLeader2)
-                            {
-                                countLeader2 = count2;
-                                leader2 = sliceArray2[j];
-                            }
-                        }
-                    }
-
-                    else if (sliceArray2[j] != sliceArray2[j+1] && count2 !=0 )
-                    {
-                        count2++;
-                        countLeader2 = count2;
-                        count2 = 0;
-                    }
-
-                    else
-                    {
-                        if(count2 > countLeader2)
-                        {
-                            leader2 = sliceArray2[j];
-                            countLeader2 = count2;
-                            count2 = 0;
-                        }
-                    }
-                }
-                count2 = 0;
-
-                var slice2 = (n - index + 2)/2;
-                if(countLeader2 < slice2)
+                leader2 = FindLeader(sliceArray2, n -  index -2);
+                if (leader2 == -1)
                 {
                     index++;
                     continue;
                 }
 
-                if(leader1 == leader2)
+                if (leader1 == leader2)
                     totLeaders++;
 
                 index++;
@@ -201,6 +126,9 @@ namespace LeetCodeSolutions.Codibility
             int countLeader = 0;
             int leader = 0;
 
+            if (slice.Length == 1)
+                return slice[0];
+                
             for (int j = 0; j < length; j++)
             {
 
