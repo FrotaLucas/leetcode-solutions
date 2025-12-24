@@ -102,7 +102,10 @@ namespace LeetCodeSolutions.Codibility
                             count1++;
 
                             if (count1 > countLeader1)
+                            {
                                 countLeader1 = count1;
+                                leader2 = sliceArray1[i];
+                            }
                         }
                     }
 
@@ -144,7 +147,10 @@ namespace LeetCodeSolutions.Codibility
                         {
                             count2++;
                             if(count2 > countLeader2)
+                            {
                                 countLeader2 = count2;
+                                leader2 = sliceArray2[j];
+                            }
                         }
                     }
 
