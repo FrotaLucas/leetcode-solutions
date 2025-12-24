@@ -66,7 +66,11 @@ namespace LeetCodeSolutions.Codibility
     public class EquiLeader
     {
         //tests
-        int[] A = [4, 3, 4, 4, 4, 2]; 
+        int[] A = [4, 3, 4, 4, 4, 2]; //true tem 2 leaders 
+        int[] B = [3, 3, 3]; ///true tem 2 leaders
+        int[] C = [3, 1, 1]; //false nao tem leader
+        int[] D = [3, 1, 1,1, 2, 2, 1, 1]; //false nao tem leader
+
 
         public int Solve(int[] A)
         {
