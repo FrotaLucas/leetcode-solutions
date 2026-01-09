@@ -69,7 +69,7 @@ namespace LeetCodeSolutions.Codibility
         int[] A = [4, 3, 4, 4, 4, 2]; //true tem 2 leaders 
         int[] B = [3, 3, 3]; ///true tem 2 leaders
         int[] C = [3, 1, 1]; //false nao tem leader
-        int[] D = [3, 1, 1,1, 2, 2, 1, 1]; //false nao tem leader
+        int[] D = [3, 1, 1, 1, 2, 2, 1, 1]; //false nao tem leader
 
 
         public int Solve(int[] A)
@@ -172,9 +172,10 @@ namespace LeetCodeSolutions.Codibility
                 }
             }
 
-            int n = (slice.Length +1)/ 2;
+            //int n = (slice.Length +1)/ 2;
+            var n = slice.Length / 2;
 
-            if(countLeader < n)
+            if(countLeader <= n)
                 return -1;
 
             return leader;  
