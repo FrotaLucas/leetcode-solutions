@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +9,7 @@ namespace LeetCodeSolutions.AdventOfCode
 {
     public class CountOfFrequency
     {
+
         //Challenge Advent Calender 2018
         //Day 2 advent Calender
         //link
@@ -44,10 +46,36 @@ namespace LeetCodeSolutions.AdventOfCode
         // threes = 3
         // checksum = 4 * 3 = 12
 
+        string ids_string = "abcdef,bababc,abbcde,abcccd,aabcdd,abcdee,ababab";
 
-        public CountOfFrequency()
+        public void Solve(string ids_string)
         {
-            
+            string[] ids = ids_string.Split(',');
+
+
         }
+
+
+        //tuple
+        public (int twoElements, int ThreeElments) CountTuples(string id)
+        {
+            Dictionary<char, int> dictionary = new Dictionary<char, int>();
+
+            (int twoReplicate, int threeReplicate) counters = (0, 0);
+
+            foreach(var element in id)
+            {
+                dictionary[element]++;
+            }
+
+
+            //foreach(var peer in dictionary)
+            //{
+            //    if (peer[0]. )
+            //}
+            return (1, 1);
+        }
+
+
     }
 }
