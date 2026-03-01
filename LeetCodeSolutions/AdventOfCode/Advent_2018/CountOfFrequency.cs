@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCodeSolutions.AdventOfCode
+namespace LeetCodeSolutions.AdventOfCode.Advent_2018
 {
     public class CountOfFrequency
     {
@@ -48,34 +48,43 @@ namespace LeetCodeSolutions.AdventOfCode
 
         string ids_string = "abcdef,bababc,abbcde,abcccd,aabcdd,abcdee,ababab";
 
-        public void Solve(string ids_string)
+        public int Solve(string ids_string)
         {
             string[] ids = ids_string.Split(',');
 
+            int countPairs = 0;
+            int counttriples = 0;
 
+            foreach (var id in ids)
+            {
+                var (pair, triple) = CountTuples(id);
+
+                countPairs += pair;
+                counttriples += triple;
+            }
+
+            return countPairs * counttriples;
         }
 
 
         //tuple
-        public (int twoElements, int ThreeElments) CountTuples(string id)
+        public (int pairs, int triples) CountTuples(string id_string)
         {
             Dictionary<char, int> dictionary = new Dictionary<char, int>();
 
-            (int twoReplicate, int threeReplicate) counters = (0, 0);
 
-            foreach(var element in id)
+            foreach(var element in id_string)
             {
-                dictionary[element]++;
+                if(dictionary.ContainsKey(element))
+                    dictionary[element]++;
+                else
+                    dictionary[element] = 1;
             }
 
+            int pairs = dictionary.Values.Any(value => value == 2) ? 1 : 0;   
+            int triples = dictionary.Values.Any( value => value == 3 ) ? 1 : 0;
 
-            //foreach(var peer in dictionary)
-            //{
-            //    if (peer[0]. )
-            //}
-            return (1, 1);
+            return (pairs, triples);
         }
-
-
     }
 }
