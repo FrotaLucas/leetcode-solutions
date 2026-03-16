@@ -172,10 +172,9 @@ namespace LeetCodeSolutions.Codibility
                 }
             }
 
-            //int n = (slice.Length +1)/ 2;
             var n = slice.Length / 2;
 
-            if(countLeader <= n)
+            if (countLeader <= n)
                 return -1;
 
             return leader;  
