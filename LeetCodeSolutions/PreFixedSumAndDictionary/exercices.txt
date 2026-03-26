@@ -36,6 +36,7 @@ Resposta: {1:3, 2:2, 3:1}
 💡 Dica: Use Dictionary direto.
 
 🟡 Exercícios Médios (2)
+
 4. Subarrays com soma igual a K
 
 Dado um array nums e um inteiro k, conte quantos subarrays têm soma exatamente igual a k.
@@ -54,6 +55,7 @@ Dictionary para armazenar quantas vezes uma soma apareceu
 👉 Ideia:
 
 se prefix_sum - k já apareceu → existe subarray válido
+
 5. Subarray com soma zero (detectar existência)
 
 Dado um array nums, verifique se existe algum subarray com soma 0.
