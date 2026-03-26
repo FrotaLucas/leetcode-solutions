@@ -50,17 +50,19 @@ namespace LeetCodeSolutions.Dictionaries
             
             //firt element
             Dictionary<string, int> dictionary = new Dictionary<string, int>();
-            dictionary["1.-k"] = prefixedSum[k-1];
+            dictionary[$"sum 0 {k-1}"] = prefixedSum[k-1];
 
             int j = k;
             while(j <= array.Length - 1)
             {
 
                 var sum = prefixedSum[j] - prefixedSum[j -k];
-                dictionary.Add($"sum {j} {j-k}", sum);
+                dictionary.Add($"accumulate {j} - accumulate {j-k}", sum);
                 j = j + 1;
             }
 
+            dictionary.Keys.ToList().ForEach(key => Console.WriteLine(key));
+            
             return dictionary.Values.ToList();
         }
     }
