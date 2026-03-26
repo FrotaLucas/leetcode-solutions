@@ -27,12 +27,13 @@ namespace LeetCodeSolutions.Dictionaries
     public class SumFixSubArray
     {
 
-        public List<int> Sum(int[] array, int k)
+        public List<int> Solve(int[] array, int k)
         {
             //prefix sum
             int[] prefixedSum = new int[array.Length];
 
             prefixedSum[0] = array[0];
+
 
             //error
             if (array.Length < k)
