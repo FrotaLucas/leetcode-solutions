@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCodeSolutions.Dictionaries
+namespace LeetCodeSolutions.PreFixedSumAndDictionary
 {
 
     //    Exercícios Fáceis(3)
